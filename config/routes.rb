@@ -1,4 +1,14 @@
 Earlymorningpost::Application.routes.draw do
+
+  root :to => 'pages#home'
+
+  match "/technology",     :to => "pages#technology", :via => :get
+  match "/sports",         :to => "pages#sports", :via => :get
+  match "/world",          :to => "pages#world", :via => :get
+  match "/entertainment",  :to => "pages#entertainment", :via => :get
+  match "/about",          :to => "pages#about", :via => :get
+  match "/contact",        :to => "pages#contact", :via => :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

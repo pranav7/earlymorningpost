@@ -1,3 +1,31 @@
 .logo {
 	padding: 10px;
 }
+
+.footer_top {
+	background: #333333;
+	padding: 10px;
+	margin-top: 10%;
+}
+
+.footer_top .side-nav li a {
+	color: white;
+	text-decoration: none;
+}
+
+.footer_top .side-nav li a:hover {
+	color: white;
+	font-weight: bold;
+}
+
+.footer_top .side-nav li a:visited {
+	color: white;
+	text-decoration: bold;
+}
+
+.footer_bottom {
+	width: 100%;
+	background: #4D4D4D;
+	color: #F0F0F0;
+	padding: 10px;
+}

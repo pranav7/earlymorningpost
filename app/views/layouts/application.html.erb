@@ -22,12 +22,15 @@
 </head>
 
 <body>
+  <!-- Header, find it in _header.html.erb -->
   <%= render  'layouts/header' %>
   
   <div class="row">
+    <!-- Main -->
     <div class="small-9 columns">
       <%= yield %>
     </div>
+    <!-- Side Bar -->
     <div class="small-3 columns">
       <h3 class="subheader">Recent News</h3>
       <ul class="side-nav"> 
@@ -38,6 +41,9 @@
       </ul>
     </div>
   </div>
+
+  <!-- Footer: Find it in _footer.html.erb -->
+  <%= render  'layouts/footer' %>
 
   <%= javascript_include_tag "application" %>
 </body>

@@ -14,27 +14,29 @@
 	padding: 10px;
 }
 
-.footer_top .footer_logo {
-}
-
-.footer_top .side-nav li a {
-	color: white;
+.footer_top .side-nav li a:link {
+	color: #C4C4C4;
 	text-decoration: none;
 }
 
 .footer_top .side-nav li a:hover {
-	font-color: #FFE44A;
 	font-weight: bold;
+	color: #ffffff;
 }
 
 .footer_top .side-nav li a:visited {
-	color: white;
+	color: #C4C4C4;
 	text-decoration: bold;
 }
 
 .footer_bottom {
 	width: 100%;
 	background: #454545;
-	color: #EDEDED;
-	padding: 15px
+	color: #C4C4C4;
+}
+
+.footer_bottom p {
+	margin-top: 10px;
+	text-align: left;
+	font-size: 80%;
 }

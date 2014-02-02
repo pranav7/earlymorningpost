@@ -15,7 +15,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
  <title><%= title %></title>
-
+ <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Roboto+Slab:400,700 ' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,900,500,700,100' rel='stylesheet' type='text/css'>
  <%= stylesheet_link_tag    "application" %>
  <%= javascript_include_tag "vendor/custom.modernizr" %>
  <%= csrf_meta_tags %>
@@ -25,7 +26,7 @@
   <!-- Header, find it in _header.html.erb -->
   <%= render  'layouts/header' %>
   
-  <div class="row">
+  <div class="content row">
     <!-- Main -->
     <div class="small-9 columns">
       <%= yield %>

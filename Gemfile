@@ -6,6 +6,9 @@ gem 'rails', '4.0.2'
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
 
+# Use Annotate to annotate models
+gem 'annotate'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

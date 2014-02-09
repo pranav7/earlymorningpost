@@ -10,8 +10,13 @@ module ApplicationHelper
 		end
 	end
 
-	def logo
-		image_tag("logo.png",	:alt => "The Early Morning Post",	:size => "200" )
+	def logoHeader
+		image_tag("logoHeader.png",	:alt => "The Early Morning Post" )
+	end
+
+	def logoFooter
+		image_tag("logoFooter.png",	:alt => "The Early Morning Post",	
+									:size => "175" )
 	end
 
 end

@@ -1,5 +1,5 @@
 Earlymorningpost::Application.routes.draw do
-
+  resources :news
   root :to => 'pages#home'
 
   match "/technology",     :to => "pages#technology", :via => :get

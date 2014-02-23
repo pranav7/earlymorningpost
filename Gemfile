@@ -38,6 +38,18 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'spork'
+end
+
+group :test do
+  gem 'guard-rspec'
+  gem 'launchy'
+end
+
 gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password

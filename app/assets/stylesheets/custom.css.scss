@@ -78,3 +78,49 @@ $content-color: #3D3D3D;
 	text-align: left;
 	font-size: 80%;
 }
+
+textarea {
+    height: auto;
+    font-size: 110%;
+    font-family: $font-stack;
+}
+
+.custom-dropdown {
+    height: 32px;
+    background: #fff;
+    border: 1px solid #C4C4C4;
+    width: 260px;
+    text-indent: 8px;
+}
+
+/* .error {
+	background: #e74c3c;
+	color: #fff;
+	border: 2px solid #c0392b;
+	padding: 2em;
+	margin: 2em;
+
+	ul {
+    	list-style: none;
+    	text-align: left;
+    }
+
+    ul li {
+    	font-size: 90%;
+    	margin-left: 1em;
+    }
+
+  	h4 {
+		font-family: $font-heading;
+		font-weight: 400;
+		color: #fff;
+	}
+
+	span {
+		font-weight: bold;
+	}
+} */
+
+.field_with_errors {
+	
+}

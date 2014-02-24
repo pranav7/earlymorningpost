@@ -29,20 +29,12 @@
   
   <div class="content row">
     <!-- Main -->
-    <div class="large-9 columns">
+    <div class="large-12 columns">
       <%= yield %>
     </div>
-    <!-- Side Bar -->
-    <div class="large-3 columns">
-      <h3 class="subheader">Recent News</h3>
-      <ul class="side-nav"> 
-        <li><a href="#">Link 1</a></li> 
-        <li><a href="#">Link 2</a></li> 
-        <li><a href="#">Link 3</a></li> 
-        <li><a href="#">Link 4</a></li> 
-      </ul>
-    </div>
   </div>
+
+  <%= debug(params) if Rails.env.development? %>
 
   <!-- Footer: Find it in _footer.html.erb -->
   <%= render  'layouts/footer' %>

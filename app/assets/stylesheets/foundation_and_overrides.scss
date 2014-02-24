@@ -625,24 +625,24 @@ $default-float: left;
 
 // We use these to control the style of the custom select dropdown element.
 
-// $custom-dropdown-height: 200px;
-// $custom-dropdown-bg: #fff;
-// $custom-dropdown-border-color: darken(#fff, 20%);
-// $custom-dropdown-border-width: 1px;
-// $custom-dropdown-border-style: solid;
-// $custom-dropdown-font-color: #555;
-// $custom-dropdown-font-size: em-calc(14);
-// $custom-dropdown-color-selected: #eeeeee;
-// $custom-dropdown-font-color-selected: #000;
-// $custom-dropdown-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
-// $custom-dropdown-offset-top: auto;
-// $custom-dropdown-list-padding: em-calc(4);
-// $custom-dropdown-default-float-padding: em-calc(6);
-// $custom-dropdown-opposite-padding: em-calc(38);
-// $custom-dropdown-list-item-min-height: em-calc(24);
-// $custom-dropdown-width-small: 134px;
-// $custom-dropdown-width-medium: 254px;
-// $custom-dropdown-width-large: 434px;
+$custom-dropdown-height: 200px;
+$custom-dropdown-bg: #fff;
+$custom-dropdown-border-color: darken(#fff, 20%);
+$custom-dropdown-border-width: 1px;
+$custom-dropdown-border-style: solid;
+$custom-dropdown-font-color: #555;
+$custom-dropdown-font-size: em-calc(14);
+$custom-dropdown-color-selected: #eeeeee;
+$custom-dropdown-font-color-selected: #000;
+$custom-dropdown-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+$custom-dropdown-offset-top: auto;
+$custom-dropdown-list-padding: em-calc(4);
+$custom-dropdown-default-float-padding: em-calc(6);
+$custom-dropdown-opposite-padding: em-calc(38);
+$custom-dropdown-list-item-min-height: em-calc(24);
+$custom-dropdown-width-small: 134px;
+$custom-dropdown-width-medium: 254px;
+$custom-dropdown-width-large: 434px;
 
 //
 // Dropdown Variables

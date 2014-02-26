@@ -93,12 +93,7 @@ textarea {
     text-indent: 8px;
 }
 
-/* .error {
-	background: #e74c3c;
-	color: #fff;
-	border: 2px solid #c0392b;
-	padding: 2em;
-	margin: 2em;
+.error {
 
 	ul {
     	list-style: none;
@@ -107,19 +102,25 @@ textarea {
 
     ul li {
     	font-size: 90%;
-    	margin-left: 1em;
+    	margin: 0.5em;
+    	color: #e74c3c;
+    	font-weight: bold;
     }
 
   	h4 {
 		font-family: $font-heading;
-		font-weight: 400;
-		color: #fff;
+		font-weight: 700;
+		color: #e74c3c;
 	}
 
 	span {
 		font-weight: bold;
+		color: #c0392b;
+		font-style: $font-heading;
+		font-weight: 300;
+		margin-top: 5px;
 	}
-} */
+}
 
 .field_with_errors {
 	

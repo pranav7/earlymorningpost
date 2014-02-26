@@ -11,9 +11,8 @@
 		<%= f.text_area :content, :size => "30x25" %>
 	</div>
 	<div class="field">
-		<%= f.label :category %><br/>
-		<%= collection_select :news, :category, Category.all, :id, :name, 
-		{ :prompt => true }, :class => 'custom-dropdown' %>
+		<%= collection_select :news, :category_id, Category.all, :id, :name, 
+		{ :prompt => 'Please select a cateogry' }, :class => 'custom-dropdown' %>
 	</div>		
 	<div class="actions">
 		<%= f.submit "Save", :class => 'button' %>

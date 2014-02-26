@@ -11,16 +11,15 @@
 #
 
 class News < ActiveRecord::Base
-	attr_accessible :title, :content
+	attr_accessible :title, :content, :category_id
 
 	belongs_to :category
 
 	# Validations, a news should have a Content, Title and Category ID.
 	validates :content, presence: true
 	validates :title, presence: true
-	validates :category_id, presence: true
 
 	# This sets the order of the news from New to Old, 
 	# based on when it was created.
-	default_scope :order => 'news.created_at DESC'
+	default_scope -> { order('created_at DESC') }
 end

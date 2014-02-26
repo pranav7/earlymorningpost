@@ -1,6 +1,8 @@
 class NewsController < ApplicationController
 
 	def index
+		# Needs to be implemented yet.
+		render 'new'
 	end
 
 	def new
@@ -10,9 +12,9 @@ class NewsController < ApplicationController
 	end
 
 	def create
-		@news = News.new(news_params)
+		@news = News.new(params[:news])
 		if @news.save
-			# We'll implement success here.
+			redirect_to root_path, :flash => { :success => "News Posted!"}
 		else
 			render 'new'
 		end

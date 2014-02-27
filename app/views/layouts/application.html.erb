@@ -27,6 +27,28 @@
   <!-- Header, find it in _header.html.erb -->
   <%= render  'layouts/header' %>
   
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <% if flash[:error] %>
+          <div class="error"><%= flash[:error] %></div>
+        <% end %>
+
+        <% if flash[:success] %>
+          <div class="success"><%= flash[:success] %></div>
+        <% end %>
+
+        <%if flash[:notice] %>
+           <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+
+        <%if flash[:alert] %>
+          <div class="alert"><%= flash[:alert] %></div>
+        <% end %>
+      </div><!-- //.twelve.columns -->
+    </div><!-- //.row -->
+  </div><!-- //.container -->
+
   <div class="content row">
     <!-- Main -->
     <div class="large-12 columns">

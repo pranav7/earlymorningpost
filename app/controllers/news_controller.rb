@@ -1,8 +1,8 @@
 class NewsController < ApplicationController
 
 	def index
-		# Needs to be implemented yet.
-		render 'new'
+		@news = News.all
+		@title = "Index"
 	end
 
 	def new
@@ -14,19 +14,31 @@ class NewsController < ApplicationController
 	def create
 		@news = News.new(params[:news])
 		if @news.save
-			redirect_to root_path, :flash => { :success => "News Posted!"}
+			#redirection to implemented
+			redirect_to @news, :flash => { :notice => "News Posted!"}
 		else
 			render 'new'
 		end
 	end
 
 	def show
+		@news = News.find(params[:id])
 	end
 
-	def edit		
+	def edit
+		@news = News.find(params[:id])
+		@title = "Edit"	
 	end
 
 	def update
+		@news = News.find(params[:id])
+		if @news.update_attributes(params[:news])
+			#redirection to implemented
+			redirect_to @news, :flash => { :notice => "News Updated!" }
+		else
+			@title = "Edit"
+			render 'edit'
+		end
 	end
 
 	def destroy		

@@ -8,16 +8,18 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  category_id :integer
+#  sub_heading :text
 #
 
 class News < ActiveRecord::Base
-	attr_accessible :title, :content, :category_id
+	attr_accessible :title, :content, :category_id, :sub_heading
 
 	belongs_to :category
 
 	# Validations, a news should have a Content, Title and Category ID.
 	validates :content, presence: true
 	validates :title, presence: true
+	validates :category_id, presence: true
 
 	# This sets the order of the news from New to Old, 
 	# based on when it was created.

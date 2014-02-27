@@ -1,0 +1,18 @@
+<h1>All News</h1>
+
+<ul class="news-list">
+	<%= @news.each do |news| %>
+		<li>
+			<span class="index-title"><%= link_to news.title, news %></span>
+			<span class="index-date">
+				<%= news.created_at.strftime("%d %b %y") %>
+				|
+				<%= link_to 'Edit', edit_news_path(news) %>
+				|
+				<%= link_to 'Delete', news, :method => :delete,
+											:confirm => "Are you sure?",
+											:title => "Delete #{news.title}" %>
+			</span>
+		</li>
+	<% end %>
+</ul>

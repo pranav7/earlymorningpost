@@ -1,11 +1,13 @@
 $font-stack: 'Droid Serif', serif;
-$font-heading: 'Roboto', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #3D3D3D;
 
 .logo {
 	padding: 10px;
 }
 
+/* Main Content */
 .content {
 	word-wrap: break-word;
 	-webkit-font-smoothing: antialiased;
@@ -13,7 +15,7 @@ $content-color: #3D3D3D;
 }
 
 .content h1, h2 {
-	font-family: $font-heading;
+	font-family: $font-roboto;
 	color: $content-color;
 	font-weight: 900;
 	word-wrap: break-word;
@@ -22,13 +24,15 @@ $content-color: #3D3D3D;
 .content h1 {
 	margin-top: 1em;
 	font-size: 3.125em;
+	letter-spacing: .01em;
+	line-height: 1;
 }
 
 .content h4 {
-	font-family: $font-heading;
+	font-family: $font-roboto;
 	font-weight: 300;
 	color: #999999;
-	margin-top: -1em;
+	margin-top: 1em;
 }
 
 .content p {
@@ -40,6 +44,7 @@ $content-color: #3D3D3D;
 	margin-top: 2.5em;
 }
 
+/* Footer */
 .footer-top-border {
 	background: #FFE44A;
 	padding: 2px;
@@ -79,6 +84,7 @@ $content-color: #3D3D3D;
 	font-size: 80%;
 }
 
+/* ADD NEWS FORM */
 .add-content {
     height: auto;
     font-size: 110%;
@@ -93,6 +99,7 @@ $content-color: #3D3D3D;
     text-indent: 8px;
 }
 
+/* Error Fields */
 .error {
 
 	ul {
@@ -108,7 +115,7 @@ $content-color: #3D3D3D;
     }
 
   	h4 {
-		font-family: $font-heading;
+		font-family: $font-roboto;
 		font-weight: 700;
 		color: #e74c3c;
 	}
@@ -116,7 +123,7 @@ $content-color: #3D3D3D;
 	span {
 		font-weight: bold;
 		color: #c0392b;
-		font-style: $font-heading;
+		font-style: $font-roboto;
 		font-weight: 300;
 		margin-top: 5px;
 	}
@@ -126,9 +133,22 @@ $content-color: #3D3D3D;
 	
 }
 
+.fields {
+	margin-top: 2em;
+}
+
+/* NEWS INDEX Page */
+
+.buttons {
+	margin-top: 3em;
+	float: right;
+}
+
 ul.news-list {
 	list-style: none;
 	text-align: left;
+	margin-left: -1em;
+	padding: 8px;
 }
 
 
@@ -136,30 +156,53 @@ ul.news-list li {
 	margin-top: 1em;
 }
 
-.news-list a {
-	color: #000;
+.link-buttons {
+	font-family: $font-roboto;
+	font-weight: 700;
+	margin: 1em;
 }
 
-.news-list a:visited {
-	color: #000;
+.edit {
+	background: #2ecc71;
+	color: #fff;
+	padding: 4px;
 }
 
-.news-list a:hover {
-	color: #E33636;
+a:hover.edit {
+	color: #fff;
+	background: #27ae60;
 }
 
-.index-date {
-	font-style: $font-heading;
+.delete {
+	background: #e74c3c;
+	color: #fff;
+	padding: 4px;
+}
+
+a:hover.delete {
+	color: #fff;
+	background: #c0392b;
+}
+
+.index-description {
+	font-style: $font-roboto;
 	font-weight: 300;
 	font-size: 75%;
 	color: #878787;
 	display: block;
+	margin-top: 0.5em;
 }
 
 .index-title {
 	display: block;
-	font-style: $font-heading;
-	font-weight: 700;
-	font-size: 110%;
+	font-style: $font-roboto-condensed;
 	color: #000;
+}
+
+a.index-title {
+	color: #000;
+}
+
+a:hover.index-title {
+	color: #c0392b;
 }

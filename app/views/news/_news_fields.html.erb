@@ -1,17 +1,17 @@
 <%= render 'shared/error_messages' %>
 <div class="field">
-	<%= f.label :title  %><br/>
+	<%= f.label :title  %>
 	<%= f.text_field :title %>
 </div>
 	<div class="field">
-	<%= f.label :sub_heading  %><br/>
+	<%= f.label :sub_heading  %>
 	<%= f.text_area :sub_heading %>
 </div>
 <div class="field">
-	<%= f.label :content %><br/>
+	<%= f.label :content %>
 	<%= f.text_area :content, :size => "30x20", :class => 'add-content' %>
 </div>
 <div class="field">
 	<%= collection_select :news, :category_id, Category.all, :id, :name, 
-	{ :prompt => 'Please select a cateogry' }, :class => 'custom-dropdown' %>
+	{ :prompt => 'Please select a cateogry' } %>
 </div>	

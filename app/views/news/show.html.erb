@@ -1,3 +1,9 @@
 <h1><%= @news.title %></h1>
 <h4><%= @news.sub_heading %></h4>
+<!-- IF SIGNED IMPLEMENTATION TO BE DONE -->
+<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny' %>
+<%= link_to 'Delete', @news, :method => :delete,
+							 :confirm => "Are you sure?",
+							 :title => "Delete #{@news.title}",
+							 :class => 'button tiny alert' %>
 <%= simple_format @news.content %>

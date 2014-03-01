@@ -16,7 +16,7 @@
 
       <section class="top-bar-section">
         <!-- Left Nav Section -->
-        <ul>
+        <ul class="left">
           <li class="divider"></li>
           <li><%= link_to "Home",            root_path   %></li>
           <li class="divider"></li>
@@ -28,6 +28,12 @@
           <li class="divider"></li>
           <li><%= link_to "World",           world_path  %></li>
           <li class="divider"></li>
+        </ul>
+
+        <!-- IF STATEMENT TO BE IMPLEMENTED FOR ADMIN ACCESS ONLY -->
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><%= link_to "Manage", news_index_path %></li>
         </ul>
       </section>
     </nav> 

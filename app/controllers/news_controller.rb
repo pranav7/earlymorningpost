@@ -23,6 +23,7 @@ class NewsController < ApplicationController
 
 	def show
 		@news = News.find(params[:id])
+		@title = @news.title
 	end
 
 	def edit
@@ -41,7 +42,10 @@ class NewsController < ApplicationController
 		end
 	end
 
-	def destroy		
+	def destroy
+		@news = News.find(params[:id])
+		@news.destroy
+		redirect_to news_index_path, :flash => { :alert => "News Deleted!"}
 	end
 
 	private

@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
 
 	def index
-		@news = News.all
+		@news = News.order(:created_at).page(params[:page])
 		@title = "Index"
 	end
 

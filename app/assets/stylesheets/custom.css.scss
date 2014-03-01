@@ -91,14 +91,6 @@ $content-color: #3D3D3D;
     font-family: $font-stack;
 }
 
-.custom-dropdown {
-    height: 32px;
-    background: #fff;
-    border: 1px solid #C4C4C4;
-    width: 260px;
-    text-indent: 8px;
-}
-
 /* Error Fields */
 .error {
 
@@ -156,34 +148,6 @@ ul.news-list li {
 	margin-top: 1em;
 }
 
-.link-buttons {
-	font-family: $font-roboto;
-	font-weight: 700;
-	margin: 1em;
-}
-
-.edit {
-	background: #2ecc71;
-	color: #fff;
-	padding: 4px;
-}
-
-a:hover.edit {
-	color: #fff;
-	background: #27ae60;
-}
-
-.delete {
-	background: #e74c3c;
-	color: #fff;
-	padding: 4px;
-}
-
-a:hover.delete {
-	color: #fff;
-	background: #c0392b;
-}
-
 .index-description {
 	font-style: $font-roboto;
 	font-weight: 300;
@@ -195,14 +159,14 @@ a:hover.delete {
 
 .index-title {
 	display: block;
-	font-style: $font-roboto-condensed;
 	color: #000;
-}
 
-a.index-title {
-	color: #000;
-}
+	a {
+		color: #000;
+	}
 
-a:hover.index-title {
-	color: #c0392b;
+	a:hover {
+		color: #c0392b;
+		font-weight: 700;
+	}
 }

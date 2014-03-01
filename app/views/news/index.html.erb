@@ -8,18 +8,15 @@
 	</div>
 </div>
 
-<ul class="news-list">
-	<%= @news.each do |news| %>
-		<li>
-			<span class="index-title"><%= link_to news.title, news, :class => 'index-title' %></span>
-			<span class="index-description">
-				<%= news.created_at.strftime("%d %b %y") %>
-				<%= link_to 'Edit', edit_news_path(news), :class => 'link-buttons edit' %>
-				<%= link_to 'Delete', news, :method => :delete,
-											:confirm => "Are you sure?",
-											:title => "Delete #{news.title}",
-											:class => 'link-buttons delete' %>
-			</span>
-		</li>
-	<% end %>
-</ul>
+<div class="row">
+	<div class="large-12 columns">
+		<ul class="news-list">
+			<% for news in @news %>
+				<li>
+					<%= render 'news_index', :news => news %>
+				</li>
+			<% end %>
+		</ul>
+		<%= paginate @news %>
+	</div>
+</div>

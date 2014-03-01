@@ -1,0 +1,11 @@
+<span class="index-title">
+	<%= link_to news.title, news %>
+</span>
+<span class="index-description">
+	<%= news.created_at.strftime("%d %b %y") %>
+	<%= link_to 'Edit', edit_news_path(news), :class => 'button tiny' %>
+	<%= link_to 'Delete', news, :method => :delete,
+							:confirm => "Are you sure?",
+							:title => "Delete #{news.title}",
+							:class => 'button tiny alert' %>
+</span>

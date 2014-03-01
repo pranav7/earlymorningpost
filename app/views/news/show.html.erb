@@ -1,9 +1,21 @@
 <h1><%= @news.title %></h1>
 <h4><%= @news.sub_heading %></h4>
-<!-- IF SIGNED IMPLEMENTATION TO BE DONE -->
-<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny' %>
-<%= link_to 'Delete', @news, :method => :delete,
-							 :confirm => "Are you sure?",
-							 :title => "Delete #{@news.title}",
-							 :class => 'button tiny alert' %>
+
+<span class="news-date">
+	<% if @news.created_at > 2.days.ago %>
+		<%= time_ago_in_words(@news.created_at).upcase %> AGO
+	<% else %>
+		<%= @news.created_at.to_formatted_s(:long_ordinal) %> UTC
+	<% end %>
+</span>
+
+<div class="admin-buttons">
+	<!-- IF SIGNED IMPLEMENTATION TO BE DONE -->
+	<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny' %>
+	<%= link_to 'Delete', @news, :method => :delete,
+								 :confirm => "Are you sure?",
+								 :title => "Delete #{@news.title}",
+								 :class => 'button tiny alert' %>
+</div>
+
 <%= simple_format @news.content %>

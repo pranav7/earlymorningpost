@@ -1,7 +1,7 @@
-$font-stack: 'Droid Serif', serif;
+$font-stack: 'Roboto Slab', serif;
 $font-roboto: 'Roboto', sans-serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
-$content-color: #3D3D3D;
+$content-color: #4E5860;
 
 .logo {
 	padding: 10px;
@@ -29,7 +29,7 @@ $content-color: #3D3D3D;
 }
 
 .content h4 {
-	font-family: $font-roboto;
+	font-family: $font-stack;
 	font-weight: 300;
 	font-size: 1.7em;
 	color: #999999;
@@ -37,11 +37,23 @@ $content-color: #3D3D3D;
 
 .content p {
 	font-family: $font-stack;
+	font-style: normal;
+	font-size: 115%;
 	color: $content-color;
-	font-size: 120%;
 	line-height: 1.78;
 	letter-spacing: .01em;
 	margin-top: 2.5em;
+}
+
+.news-date {
+	font-family: $font-roboto-condensed;
+	font-size: 80%;
+	color: #999999;
+	margin-right: 2em;
+}
+
+.admin-buttons {
+	float: right;
 }
 
 /* Footer */

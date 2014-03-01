@@ -13,5 +13,5 @@
 </div>
 <div class="field">
 	<%= collection_select :news, :category_id, Category.all, :id, :name, 
-	{ :prompt => 'Please select a cateogry' } %>
-</div>	
+	{ :prompt => 'Please select a cateogry' }, :class => 'dropdown' %>
+</div>

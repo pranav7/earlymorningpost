@@ -30,25 +30,11 @@
   
   <div class="container">
     <div class="row">
-      <div class="twelve columns">
-        <% if flash[:error] %>
-          <div class="flash error"><%= flash[:error] %></div>
-        <% end %>
-
-        <% if flash[:success] %>
-          <div class="flash success"><%= flash[:success] %></div>
-        <% end %>
-
-        <%if flash[:notice] %>
-           <div class="flash notice"><%= flash[:notice] %></div>
-        <% end %>
-
-        <%if flash[:alert] %>
-          <div class="alert"><%= flash[:alert] %></div>
-        <% end %>
-      </div><!-- //.twelve.columns -->
-    </div><!-- //.row -->
-  </div><!-- //.container -->
+      <div class="large-12 columns">
+        <%= render 'layouts/flash_messages' %>
+      </div>
+    </div>
+  </div>
 
   <div class="content row">
     <!-- Main -->

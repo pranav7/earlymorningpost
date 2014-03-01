@@ -31,8 +31,8 @@ $content-color: #3D3D3D;
 .content h4 {
 	font-family: $font-roboto;
 	font-weight: 300;
+	font-size: 1.7em;
 	color: #999999;
-	margin-top: 1em;
 }
 
 .content p {
@@ -89,6 +89,15 @@ $content-color: #3D3D3D;
     height: auto;
     font-size: 110%;
     font-family: $font-stack;
+}
+
+/* Fields */
+
+.fields {
+	label {
+		font-family: $font-roboto;
+		font-weight: 700;
+	}
 }
 
 /* Error Fields */
@@ -149,12 +158,16 @@ ul.news-list li {
 }
 
 .index-description {
-	font-style: $font-roboto;
-	font-weight: 300;
-	font-size: 75%;
-	color: #878787;
 	display: block;
 	margin-top: 0.5em;
+}
+
+.index-date {
+	font-style: $font-roboto;
+	font-weight: 300;
+	font-size: 80%;
+	color: #878787;
+	margin-right: 0.75em;
 }
 
 .index-title {
@@ -169,4 +182,26 @@ ul.news-list li {
 		color: #c0392b;
 		font-weight: 700;
 	}
+}
+
+/* Flash Messages */
+
+.flash {
+	padding: 1.5em;
+	font-style: $font-roboto;
+	font-weight: 700;
+	margin-top: 1.5em;
+	-webkit-border-radius: 8px;
+  	-moz-border-radius: 8px;
+  	background-size: auto;
+}
+
+.notice {
+  	background: #2ecc71;
+	color: #fff;
+}
+
+.alert {
+	background: #e74c3c;
+	color: #fff;
 }

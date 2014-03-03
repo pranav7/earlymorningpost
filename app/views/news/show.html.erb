@@ -9,13 +9,15 @@
 	<% end %>
 </span>
 
-<div class="admin-buttons">
-	<!-- IF SIGNED IMPLEMENTATION TO BE DONE -->
-	<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny' %>
-	<%= link_to 'Delete', @news, :method => :delete,
-								 :confirm => "Are you sure?",
-								 :title => "Delete #{@news.title}",
-								 :class => 'button tiny alert' %>
-</div>
+<% if admin? %>
+	<div class="admin-buttons">
+		<!-- IF SIGNED IMPLEMENTATION TO BE DONE -->
+		<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny' %>
+		<%= link_to 'Delete', @news, :method => :delete,
+									 :confirm => "Are you sure?",
+									 :title => "Delete #{@news.title}",
+									 :class => 'button tiny alert' %>
+	</div>
+<% end %>
 
 <%= simple_format @news.content %>

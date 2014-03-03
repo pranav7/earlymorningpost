@@ -1,5 +1,6 @@
 Earlymorningpost::Application.routes.draw do
   resources :news
+  resources :sessions, :only => [:new, :create, :destroy]
   root :to => 'pages#home'
 
   match "/technology",     :to => "pages#technology", :via => :get
@@ -8,6 +9,8 @@ Earlymorningpost::Application.routes.draw do
   match "/entertainment",  :to => "pages#entertainment", :via => :get
   match "/about",          :to => "pages#about", :via => :get
   match "/contact",        :to => "pages#contact", :via => :get
+  match "/nimda",          :to => "sessions#new", :via => :get
+  match "/byebye",         :to => "sessions#destroy", :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

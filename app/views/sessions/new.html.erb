@@ -1,0 +1,12 @@
+<h1>Hi, fellow Earthling</h1>
+<h4>Do you know how to get in?</h4>
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+	<div class="field">
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Let's do this!", :class => "button" %>
+	</div>
+<% end  %>

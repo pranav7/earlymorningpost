@@ -1,4 +1,6 @@
 class NewsController < ApplicationController
+	# Find the methods in the Application Controller
+	before_filter :authenticate, :except => :show
 
 	def index
 		@news = News.order(:created_at).page(params[:page])

@@ -1,3 +1,157 @@
 // Place all the styles related to the news controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack: 'Roboto Slab', serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-roboto-condensed: 'Roboto Condensed', sans-serif;
+$content-color: #4E5860;
+
+/* Main Content */
+.content {
+	word-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+.content h1, h2 {
+	font-family: $font-roboto;
+	color: #2E3842;
+	font-weight: 900;
+	word-wrap: break-word;
+}
+
+.content h1 {
+	margin-top: 1em;
+	font-size: 3.125em;
+	letter-spacing: .01em;
+	line-height: 1;
+}
+
+.content h4 {
+	font-family: $font-stack;
+	font-weight: 300;
+	font-size: 1.7em;
+	color: #999999;
+}
+
+.content p {
+	font-family: $font-stack;
+	font-style: normal;
+	font-size: 115%;
+	color: $content-color;
+	line-height: 1.78;
+	letter-spacing: .01em;
+	margin-top: 2.5em;
+}
+
+.news-date {
+	font-family: $font-roboto-condensed;
+	font-size: 80%;
+	color: #999999;
+	margin-right: 2em;
+}
+
+.admin-buttons {
+	float: right;
+}
+
+/* ADD NEWS FORM */
+.add-content {
+    height: auto;
+    font-size: 110%;
+    font-family: $font-stack;
+}
+
+/* Fields */
+
+.fields {
+	label {
+		font-family: $font-roboto;
+		font-weight: 700;
+	}
+}
+
+/* Error Fields */
+.error {
+
+	ul {
+    	list-style: none;
+    	text-align: left;
+    }
+
+    ul li {
+    	font-size: 90%;
+    	margin: 0.5em;
+    	color: #e74c3c;
+    	font-weight: bold;
+    }
+
+  	h4 {
+		font-family: $font-roboto;
+		font-weight: 700;
+		color: #e74c3c;
+	}
+
+	span {
+		font-weight: bold;
+		color: #c0392b;
+		font-style: $font-roboto;
+		font-weight: 300;
+		margin-top: 5px;
+	}
+}
+
+.field_with_errors {
+	
+}
+
+.fields {
+	margin-top: 2em;
+}
+
+/* NEWS INDEX Page */
+
+.buttons {
+	margin-top: 3em;
+	float: right;
+}
+
+ul.news-list {
+	list-style: none;
+	text-align: left;
+	margin-left: -1em;
+	padding: 8px;
+}
+
+
+ul.news-list li {
+	margin-top: 1em;
+}
+
+.index-description {
+	display: block;
+	margin-top: 0.5em;
+}
+
+.index-date {
+	font-style: $font-roboto;
+	font-weight: 300;
+	font-size: 80%;
+	color: #878787;
+	margin-right: 0.75em;
+}
+
+.index-title {
+	display: block;
+	color: #000;
+
+	a {
+		color: #000;
+	}
+
+	a:hover {
+		color: #c0392b;
+		font-weight: 700;
+	}
+}

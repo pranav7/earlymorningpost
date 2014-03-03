@@ -30,11 +30,13 @@
           <li class="divider"></li>
         </ul>
 
-        <!-- IF STATEMENT TO BE IMPLEMENTED FOR ADMIN ACCESS ONLY -->
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li><%= link_to "Manage", news_index_path %></li>
-        </ul>
+        <% if admin? %>
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li><%= link_to "Manage", news_index_path %></li>
+            <li><%= link_to "Logout", byebye_path %></li>
+          </ul>
+        <% end %>
       </section>
     </nav> 
   </div>

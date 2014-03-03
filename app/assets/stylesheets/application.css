@@ -12,3 +12,74 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
+
+$font-stack: 'Roboto Slab', serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-roboto-condensed: 'Roboto Condensed', sans-serif;
+$content-color: #4E5860;
+
+.logo {
+	padding: 10px;
+}
+
+/* Footer */
+.footer-top-border {
+	background: #FFE44A;
+	padding: 2px;
+	margin-top: 5%;
+}
+
+.footer_top {
+	width: 100%;
+	background: #333333;
+	padding: 10px;
+}
+
+.footer_top .side-nav li a:link {
+	color: #C4C4C4;
+	text-decoration: none;
+}
+
+.footer_top .side-nav li a:hover {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.footer_top .side-nav li a:visited {
+	color: #C4C4C4;
+	text-decoration: bold;
+}
+
+.footer_bottom {
+	width: 100%;
+	background: #454545;
+	color: #C4C4C4;
+}
+
+.footer_bottom p {
+	margin-top: 10px;
+	text-align: left;
+	font-size: 80%;
+}
+
+/* Flash Messages */
+
+.flash {
+	padding: 1.5em;
+	font-style: $font-roboto;
+	font-weight: 700;
+	margin-top: 1.5em;
+	-webkit-border-radius: 8px;
+  	-moz-border-radius: 8px;
+  	background-size: auto;
+}
+
+.notice {
+  	background: #2ecc71;
+	color: #fff;
+}
+
+.alert {
+	background: #e74c3c;
+	color: #fff;
+}

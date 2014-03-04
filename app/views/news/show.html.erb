@@ -20,4 +20,8 @@
 	</div>
 <% end %>
 
+<div class="image">
+	<%= image_tag @news.image_url if @news.image? %>
+</div>
+
 <%= simple_format @news.content %>

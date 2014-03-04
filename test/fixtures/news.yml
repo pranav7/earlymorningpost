@@ -9,6 +9,7 @@
 #  updated_at  :datetime
 #  category_id :integer
 #  sub_heading :text
+#  image       :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

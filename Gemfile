@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 1.2'
 # Protect attributes from mass-assignment in ActiveRecord models.
 gem 'protected_attributes'
 
+# Gems for handling images in News
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

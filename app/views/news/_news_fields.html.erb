@@ -1,4 +1,3 @@
-<%= render 'shared/error_messages' %>
 <div class="field">
 	<%= f.label :title  %>
 	<%= f.text_field :title %>
@@ -10,6 +9,13 @@
 <div class="field">
 	<%= f.label :content %>
 	<%= f.text_area :content, :size => "30x20", :class => 'add-content' %>
+</div>
+<div class="field">
+	<%= f.file_field :image %>
+</div>
+<div class="field">
+	<%= f.label :remote_image_url, "or Image URL"  %>
+	<%= f.text_field :remote_image_url %>
 </div>
 <div class="field">
 	<%= collection_select :news, :category_id, Category.all, :id, :name, 

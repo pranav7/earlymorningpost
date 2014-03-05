@@ -25,7 +25,7 @@ $content-color: #4E5860;
 	margin-top: 1em;
 	font-size: 3.125em;
 	letter-spacing: .01em;
-	line-height: 1;
+	line-height: 1.15;
 }
 
 .content h4 {
@@ -156,7 +156,13 @@ ul.news-list li {
 	}
 }
 
-.image {
-	margin: 2em auto;
-	width: 600px;
+.news-image{
+	
+	img {
+		vertical-align: middle;
+		display: block;
+		margin-top: 2em;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }

@@ -11,7 +11,6 @@
 
 <% if admin? %>
 	<div class="admin-buttons">
-		<!-- IF SIGNED IMPLEMENTATION TO BE DONE -->
 		<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny' %>
 		<%= link_to 'Delete', @news, :method => :delete,
 									 :confirm => "Are you sure?",
@@ -20,7 +19,7 @@
 	</div>
 <% end %>
 
-<div class="image">
+<div class='news-image'>
 	<%= image_tag @news.image_url if @news.image? %>
 </div>
 

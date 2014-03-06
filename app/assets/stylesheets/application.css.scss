@@ -22,6 +22,10 @@ $content-color: #4E5860;
 	padding: 10px;
 }
 
+.side-bar {
+	margin-top: 2em;
+}
+
 /* Footer */
 .footer-top-border {
 	background: #FFE44A;
@@ -35,17 +39,17 @@ $content-color: #4E5860;
 	padding: 10px;
 }
 
-.footer_top .side-nav li a:link {
+.footer_top .footer-nav li a:link {
 	color: #C4C4C4;
 	text-decoration: none;
 }
 
-.footer_top .side-nav li a:hover {
+.footer_top .footer-nav li a:hover {
 	font-weight: bold;
 	color: #ffffff;
 }
 
-.footer_top .side-nav li a:visited {
+.footer_top .footer-nav li a:visited {
 	color: #C4C4C4;
 	text-decoration: bold;
 }
@@ -87,21 +91,39 @@ $content-color: #4E5860;
 .orbit-container {
 	margin-top: 2em;
 	overflow: hidden;
-	width: 100%;
 	position: relative;
 	background: none repeat scroll 0% 0% transparent;
 
 	.example-orbit {
 		list-style: none outside none; 
 		position: relative;
-		height: 400px;
+
 		display: block;
+		overflow: hidden;
 	}
 }
 
-.orbit-container img {
-	display: block;
-	width: 100%;
-	height: 400px;
-	vertical-align: middle;
+.orbit-caption {
+
+	a {
+		color: white;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:visited {
+		color: #fff;
+	}
+}
+
+.image-container {
+	overflow: hidden;
+	height: 300px;
+
+	img {
+		width: 100%;
+	}
 }

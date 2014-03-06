@@ -1,17 +1,19 @@
-<div class="large-10 columns">
+
 <div class="orbit-container">
+	<div class="preloader"></div>
 	<ul class="example-orbit" data-orbit>
 		<% for news in @news %>
 			<% if news.created_at > 2.days.ago and news.image? %>
 				<li>
-					<%= image_tag news.image_url %>
+					<div class="image-container">
+						<%= image_tag news.image_url %>
+					</div>
 				    <div class="orbit-caption">
-      					<strong><%= news.title %></strong> <br/>
+      					<strong><%= link_to news.title, news %></strong> <br/>
       					<%= news.category.name %>
    					</div>
 				</li>
 			<% end  %>
 		<% end  %>
 	</ul>
-</div>
 </div>

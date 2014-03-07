@@ -122,6 +122,8 @@ ul.news-list {
 	text-align: left;
 	margin-left: -1em;
 	padding: 8px;
+	font-weight: 400;
+	font-style: $font-stack !important;
 }
 
 
@@ -144,15 +146,13 @@ ul.news-list li {
 
 .index-title {
 	display: block;
-	color: #000;
 
 	a {
-		color: #000;
+		color: #0F1B21;
 	}
 
 	a:hover {
 		color: #c0392b;
-		font-weight: 700;
 	}
 }
 

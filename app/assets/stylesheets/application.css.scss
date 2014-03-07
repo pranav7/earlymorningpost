@@ -23,7 +23,7 @@ $content-color: #4E5860;
 }
 
 .side-bar {
-	margin-top: 2em;
+	margin-top: 1.5em;
 }
 
 /* Footer */
@@ -33,37 +33,68 @@ $content-color: #4E5860;
 	margin-top: 5%;
 }
 
-.footer_top {
+.footer-top {
 	width: 100%;
 	background: #333333;
 	padding: 10px;
+
+	ul.footer-nav {
+		margin-top: 1em;
+		list-style: none;
+		font-family: $font-roboto;
+		font-size: 90%;
+
+		li {
+			margin-top: 0.2em;
+		}
+	}
+
+	a {
+		color: #C4C4C4;
+		text-decoration: none;
+	}
+
+	a:hover {
+		font-weight: bold;
+		color: #ffffff;
+	}
 }
 
-.footer_top .footer-nav li a:link {
-	color: #C4C4C4;
-	text-decoration: none;
+.footer-nav {
+
+	a:link {
+		color: #C4C4C4;
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+		color: #C4C4C4;
+	}
+
+	li a:link {
+		color: #C4C4C4;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		font-weight: bold;
+		color: #ffffff;
+	}
 }
 
-.footer_top .footer-nav li a:hover {
-	font-weight: bold;
-	color: #ffffff;
-}
-
-.footer_top .footer-nav li a:visited {
-	color: #C4C4C4;
-	text-decoration: bold;
-}
-
-.footer_bottom {
+.footer-bottom {
 	width: 100%;
 	background: #454545;
 	color: #C4C4C4;
 }
 
-.footer_bottom p {
-	margin-top: 10px;
-	text-align: left;
-	font-size: 80%;
+.footer-bottom {
+	p {
+		margin-top: 10px;
+		text-align: left;
+		font-size: 80%;
+	}
 }
 
 /* Flash Messages */
@@ -89,41 +120,59 @@ $content-color: #4E5860;
 }
 
 .orbit-container {
-	margin-top: 2em;
+	margin-top: 1.5em;
+	margin-left: 1em;
 	overflow: hidden;
 	position: relative;
+	width: 90% !important;
+	font-style: $font-stack !important;
 	background: none repeat scroll 0% 0% transparent;
 
 	.example-orbit {
 		list-style: none outside none; 
 		position: relative;
-
 		display: block;
 		overflow: hidden;
 	}
-}
 
-.orbit-caption {
-
-	a {
-		color: white;
-	}
-
-	a:hover {
-		text-decoration: none;
-		color: #fff;
-	}
-
-	a:visited {
-		color: #fff;
-	}
-}
-
-.image-container {
-	overflow: hidden;
-	height: 300px;
-
-	img {
+	.image-container {
+		overflow: hidden;
+		height: 400px;
 		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.orbit-caption {
+
+		span.title {
+			display: block;
+			font-size: 115%;
+			font-style: $font-stack !important;
+			font-weight: 700;
+		}
+
+		span.category {
+			color: #E6E6E6;
+			font-size: 90%;
+		}
+
+		a {
+			color: white;
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+
+		a:visited {
+			color: #fff;
+		}
 	}
 }
+
+
+

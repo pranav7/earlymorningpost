@@ -18,12 +18,21 @@
 </ul>
 </div>
 
+<div class="row">
 <% for news in @news %>
-	<% if news.created_at > 7.days.ago and news.image? %>
-		<section class="card">
-		  <h1 id="card-title"><%= news.title %></h1>
-		  <h2><%= news.category.name %></h2>
-		  <div class="map"><%= image_tag news.image_url(:thumb) %></div>
-		</section>
-	<% end %>
+	<div class="small-6 columns">
+	<section class="card">
+	  <% if news.image? %>
+		<div class="image">
+			<%= image_tag news.image_url %>
+		</div>
+	  <% end %>
+	  <h2><%= news.category.name %></h2>
+	  <h1 id="card-title"><%= news.title %></h1>
+	  <p class="card-content">		  	
+	  	<%= news.content %>
+	  </p>
+	</section>
+	</div>
 <% end %>
+</div>

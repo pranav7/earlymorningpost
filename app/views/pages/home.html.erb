@@ -17,3 +17,13 @@
 	<% end %>
 </ul>
 </div>
+
+<% for news in @news %>
+	<% if news.created_at > 7.days.ago and news.image? %>
+		<section class="card">
+		  <h1 id="card-title"><%= news.title %></h1>
+		  <h2><%= news.category.name %></h2>
+		  <div class="map"><%= image_tag news.image_url(:thumb) %></div>
+		</section>
+	<% end %>
+<% end %>

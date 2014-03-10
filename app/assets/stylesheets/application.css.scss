@@ -177,5 +177,54 @@ $content-color: #4E5860;
 	}
 }
 
+.card {
+	padding:1.5rem;
+	box-shadow:0 1px 2px #aaa;
+	background: white;
+	margin:0 1rem 1rem;
+	border-radius:3px;
+	transform-origin: top left;
+	font-family: $font-roboto !important; 
+	line-height:1.2; 
+	vertical-align:middle;
+	width: 400px;
+	height: 500px;
+	overflow: hidden;
+
+	#card-title {
+		font-size: 2rem !important;
+		font-weight:200 !important;
+		font-family: $font-roboto !important; 
+		line-height:1.2 !important; 
+		vertical-align:middle !important;
+	}
+	strong {
+		font-weight:300;
+		color:#539D00;
+	}
+
+	h2 {
+		font-size: 0.9rem;
+		line-height:2.5;
+		color:gray;
+		font-weight:400;
+	}
+}
+
+.card:after {
+  position:absolute;
+  font-size:.9rem;
+  top:1.5rem;
+  right:1rem;
+  content:"i";
+  border:thin solid gray;
+  color:gray;
+  width:1rem;
+  line-height:1rem;
+  text-align:center;
+  border-radius:50%;
+  pointer-events:none;
+}
+
 
 

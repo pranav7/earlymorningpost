@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
+    @home_page = true
     @news = News.all
   end
 

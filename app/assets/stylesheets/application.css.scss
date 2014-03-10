@@ -22,6 +22,14 @@ $content-color: #4E5860;
 	padding: 10px;
 }
 
+.homepage {
+	background: #FCFCFC;
+}
+
+.header {
+	background: #fff;
+}
+
 .side-bar {
 	margin-top: 1.5em;
 }
@@ -119,14 +127,12 @@ $content-color: #4E5860;
 	color: #fff;
 }
 
-.orbit-container {
+.slideshow-wrapper {
 	margin-top: 1.5em;
 	margin-left: 1em;
 	overflow: hidden;
 	position: relative;
 	width: 90% !important;
-	font-style: $font-stack !important;
-	background: none repeat scroll 0% 0% transparent;
 
 	.example-orbit {
 		list-style: none outside none; 
@@ -147,14 +153,11 @@ $content-color: #4E5860;
 
 	.orbit-caption {
 
-		span.title {
-			display: block;
-			font-size: 115%;
+		.title {
 			font-style: $font-stack !important;
-			font-weight: 700;
 		}
 
-		span.category {
+		.category {
 			color: #E6E6E6;
 			font-size: 90%;
 		}

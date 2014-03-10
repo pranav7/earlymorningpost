@@ -24,9 +24,11 @@
  <%= csrf_meta_tags %>
 </head>
 
-<body>
+<body class="<%= @home_page ? 'homepage' : '' %>">
   <!-- Header, find it in _header.html.erb -->
-  <%= render  'layouts/header' %>
+  <div class="header">
+    <%= render  'layouts/header' %>
+  </div>
   
   <div class="container">
     <div class="row">

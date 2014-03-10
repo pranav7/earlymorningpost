@@ -1,18 +1,19 @@
-<div class="orbit-container">
-	<div class="preloader"></div>
-	<ul class="example-orbit" data-orbit>
-		<% for news in @news %>
-			<% if news.created_at > 7.days.ago and news.image? %>
-				<li>
-					<div class="image-container">
-						<%= image_tag news.image_url %>
+
+<div class="slideshow-wrapper">
+<div class="preloader"></div>
+<ul class="example-orbit" data-orbit>
+	<% for news in @news %>
+		<% if news.created_at > 7.days.ago and news.image? %>
+			<li>
+				<div class="image-container">
+					<%= image_tag news.image_url %>
+				</div>
+			    <div class="orbit-caption">
+  					<div class="title"><%= link_to news.title, news %></div>
+  					<div class="category"><%= news.category.name %></div>
 					</div>
-				    <div class="orbit-caption">
-      					<span class="title"><%= link_to news.title, news %></span>
-      					<span class="category"><%= news.category.name %></span>
-   					</div>
-				</li>
-			<% end  %>
-		<% end  %>
-	</ul>
+			</li>
+		<% end %>
+	<% end %>
+</ul>
 </div>

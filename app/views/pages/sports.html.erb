@@ -1,11 +1,11 @@
-<h1>Chelsea 4-1 Cardiff City: Hazard doubles in Blues’ comeback victory</h1>
-<h4>Eden Hazard found the net twice, while Samuel Eto’o scored his first Premier League goal as his team came from behind to defeat Cardiff City 4-1 at Stamford Bridge.</h4>
-
-<p>Chelsea gave away an early lead to the visitors as Jordon Mutch pounced on a defensive error from David Luiz and dinked the ball over the onrushing Chelsea goalkeeper Petr Cech.
-However, Mourinho’s men responded quickly as John Terry went close twice from Chelsea corners. But Cardiff themselves gifted a goal to the hosts.</p>
-
-<p>David Marshal was caught napping while bouncing the ball in preparation of a goal kick, with Samuel Eto’o lurking around. The former Barcelona man nipped in to knock the ball towards Hazard, who in turn squared the ball off to him in an open goal, but the Cameroonian was unable to get his shot away only for Hazard to fire the ball in from close range.</p>
-
-<p>The substitute Fernando Torres had a good effort blocked as Chelsea surged forward for a third goal, but they were being caught on the counter as Cech was forced into a good save to deny Kim Bo-Kyung.</p>
-
-<p>Oscar sealed the victory for the hosts 12 minutes before the end, with a brilliant effort from outside the area as the ball cannoned in off the underside of the post, before Hazard added a fourth from a tight angle.</p>
+<div class="main">
+<% if @news.empty? %>
+	<h2>Jim's dead.</h2>
+<% else %>
+<% for news in @news %>
+	<div class="small-6 columns">
+		<%= render 'card', :news => news %>
+	</div>
+<% end %>
+<% end %>
+</div>

@@ -1,0 +1,17 @@
+<section class="card">
+	<% if news.image? %>
+	<div class="image">
+		<%= image_tag news.image_url %>
+	</div>
+	<% end %>
+	<div class="categories">
+		<h2 class="card-captions floatL"><%= news.category.name.upcase %></h2>
+		<h2 class="card-captions floatR"><%= news.created_at.to_formatted_s(:long_ordinal).upcase %> UTC</h2>
+	</div>
+	<div id="card-title">
+		<h1><%= news.title %></h1>
+	</div>
+	<div class="card-content ellipsis multiline">
+		<p><%= news.content %></p>
+	</div>
+</section>

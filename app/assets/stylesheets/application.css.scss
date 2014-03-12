@@ -22,8 +22,12 @@ $content-color: #4E5860;
 	padding: 10px;
 }
 
+.main {
+	margin-top: 2em;
+}
+
 .homepage {
-	background: #FCFCFC;
+	background: #F5F5F5;
 }
 
 .header {
@@ -180,37 +184,28 @@ $content-color: #4E5860;
 .card {
 	box-shadow: 0 1px 2px #aaa;
 	background: white;
-	margin: 0 1rem 1rem;
+	margin-bottom: 1rem;
 	border-radius:3px;
 	transform-origin: top left; 
 	line-height:1.2;
 	width: 375px;
 	height: 450px;
 	overflow: hidden;
+	vertical-align: top;
 
-	#card-title {
-		font-size: 1.5rem !important;
-		font-weight: 300 !important;
-		line-height:1.2 !important;
-		margin: 0 0.5rem 0 0.5rem;
-		font-family: $font-stack !important;
+	.card-captions {
+		font-family: $font-roboto-condensed !important;
+		font-size: 0.75rem;
 	}
+	#card-title {
+		margin: 0 1rem 0 1rem;
 
-	.card-content {
-		 display: -webkit-box;
-  		-webkit-line-clamp: 4;
-  		-webkit-box-orient: vertical;  
-		font-style: $font-roboto;
-		font-size: 0.8rem !important;
-		font-weight: 300 !important;
-		line-height: 1.6 !important;
-		color: #666666;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		margin: 0.5rem;
-		width: 90%;
-		height: auto;
-		padding-bottom: 0.5rem;
+		h1 {
+			font-size: 1.5rem !important;
+			font-weight: 300 !important;
+			line-height:1.2 !important;
+			font-family: $font-stack !important;
+		}
 	}
 
 	.image {
@@ -221,13 +216,37 @@ $content-color: #4E5860;
 
 	h2 {
 		font-family: $font-stack !important; 
-		margin: 0.25em 0.5em 0 0.5em;
+		margin: 0.25rem 0.5rem 0 0.5rem;
 		font-size: 0.9rem;
 		line-height:2.5;
 		color: #969696;
 		font-weight:400;
 	}
+
+	.card-content {
+		margin: -2rem 1rem 0 1rem;
+		overflow: hidden;
+
+		p {
+			font-style: $font-roboto;
+			font-size: 0.8rem !important;
+			font-weight: 300 !important;
+			line-height: 1.6 !important;
+			color: #666666;
+		}
+	}
 }
 
+.floatL {
+	float: left;
+	margin-left: 0.5rem;
+	width: 50%;
+}
+
+.floatR {
+	float: right;
+	margin-right: 0.5rem;
+	widows: 50%;
+}
 
 

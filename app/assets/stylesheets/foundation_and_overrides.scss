@@ -609,8 +609,8 @@ $orbit-bullet-radius: rem-calc(0);
 
 // We use these to controls the style of slide numbers
 // $orbit-slide-number-bg: rgba(0,0,0,0);
-// $orbit-slide-number-font-color: #fff;
-// $orbit-slide-number-padding: rem-calc(5);
+ $orbit-slide-number-font-color: rgba(0,0,0,0);
+// $orbit-slide-number-padding: rem-calc(0);
 
 // Graceful Loading Wrapper and preloader
 $wrapper-class: "slideshow-wrapper";

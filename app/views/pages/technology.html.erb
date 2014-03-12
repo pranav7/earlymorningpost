@@ -1,3 +1,11 @@
+<div class="main">
+<% if @news.empty? %>
+	<h2>Jim's dead.</h2>
+<% else %>
 <% for news in @news %>
-	<h1><%= link_to news.title, news %></h1>
+	<div class="small-6 columns">
+		<%= render 'card', :news => news %>
+	</div>
 <% end %>
+<% end %>
+</div>

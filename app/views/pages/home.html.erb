@@ -19,7 +19,5 @@
 </div>
 
 <% for news in @news %>
-	<div class="small-6 columns">
-		<%= render 'card', :news => news %>
-	</div>
+	<%= render 'card', :news => news %>
 <% end %>

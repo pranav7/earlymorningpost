@@ -2,10 +2,8 @@
 <% if @news.empty? %>
 	<h2>Jim's dead.</h2>
 <% else %>
-<% for news in @news %>
-	<div class="small-6 columns">
+	<% for news in @news %>
 		<%= render 'card', :news => news %>
-	</div>
-<% end %>
+	<% end %>
 <% end %>
 </div>

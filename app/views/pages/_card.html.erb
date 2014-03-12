@@ -9,7 +9,7 @@
 		<h2 class="card-captions floatR"><%= news.created_at.to_formatted_s(:long_ordinal).upcase %> UTC</h2>
 	</div>
 	<div id="card-title">
-		<h1><%= news.title %></h1>
+		<h1><%=link_to news.title, news %></h1>
 	</div>
 	<div class="card-content ellipsis multiline">
 		<p><%= news.content %></p>

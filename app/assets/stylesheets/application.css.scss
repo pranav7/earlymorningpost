@@ -197,6 +197,15 @@ $content-color: #4E5860;
 		font-family: $font-roboto-condensed !important;
 		font-size: 0.75rem;
 	}
+
+	a {
+		color: #2c3e50;
+	}
+
+	a:hover {
+		color: #6E6E6E;
+	}
+
 	#card-title {
 		margin: 0 1rem 0 1rem;
 

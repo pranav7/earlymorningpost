@@ -188,7 +188,7 @@ $content-color: #4E5860;
 	border-radius:3px;
 	transform-origin: top left; 
 	line-height:1.2;
-	width: 375px;
+	width: em(350px);
 	height: 450px;
 	overflow: hidden;
 	vertical-align: top;
@@ -208,6 +208,7 @@ $content-color: #4E5860;
 
 	#card-title {
 		margin: 0 1rem 0 1rem;
+		display: block;
 
 		h1 {
 			font-size: 1.5rem !important;
@@ -247,15 +248,20 @@ $content-color: #4E5860;
 }
 
 .floatL {
+	display: inline;
+	border: 1px solid #000;
 	float: left;
 	margin-left: 0.5rem;
-	width: 50%;
+	width: 40%;
 }
 
 .floatR {
+	display: inline;
+	border: 1px solid #000;
 	float: right;
 	margin-right: 0.5rem;
-	widows: 50%;
+	width: auto;
+	text-align: right;
 }
 
 

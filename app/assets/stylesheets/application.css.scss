@@ -251,7 +251,7 @@ $content-color: #4E5860;
 	display: inline-block;
 	float: left;
 	margin-left: 0.5rem;
-	width: em(100px);
+	width: em(50px);
 }
 
 .filler {
@@ -264,5 +264,7 @@ $content-color: #4E5860;
 	float: right;
 	margin-right: 0.5rem;
 	text-align: right;
-	width: em(250px);
+	width: em(300px);
+	overflow: nowrap;
+	text-overflow: ellipsis;
 }

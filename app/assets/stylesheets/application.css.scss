@@ -248,20 +248,21 @@ $content-color: #4E5860;
 }
 
 .floatL {
-	display: inline;
-	border: 1px solid #000;
+	display: inline-block;
 	float: left;
 	margin-left: 0.5rem;
-	width: 40%;
+	width: em(100px);
+}
+
+.filler {
+	display: inline-block;
+	width: auto;
 }
 
 .floatR {
-	display: inline;
-	border: 1px solid #000;
+	display: inline-block;
 	float: right;
 	margin-right: 0.5rem;
-	width: auto;
 	text-align: right;
+	width: em(250px);
 }
-
-

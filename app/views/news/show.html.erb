@@ -17,6 +17,12 @@
 									 :title => "Delete #{@news.title}",
 									 :class => 'button tiny alert' %>
 	</div>
+<% else %>
+	<div class="social-likes">
+		<div class="facebook" title="@news.title">Facebook</div>
+		<div class="twitter" title="@news.title">Twitter</div>
+		<div class="plusone" title="@news.title">Google+</div>
+	</div>
 <% end %>
 
 <div class='news-image'>

@@ -27,7 +27,8 @@ gem 'kaminari'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem 'masonry-rails'
+# Sharing links on news pages
+gem 'social-share-button'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

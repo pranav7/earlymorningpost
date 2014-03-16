@@ -2,7 +2,7 @@
 <% if @news.empty? %>
 	<h2>Jim's dead.</h2>
 <% else %>
-	<div class="cards-wrapper">
+	<div id="cards-wrapper">
 		<% for news in @news %>
 			<%= render 'card', :news => news %>
 		<% end %>

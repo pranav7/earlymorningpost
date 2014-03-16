@@ -186,8 +186,7 @@ $content-color: #4E5860;
 	width: 100%;
 }
 
-
-$card-width: 25rem;
+$card-width: 25em;
 $card-height: auto;
 
 .card {
@@ -236,7 +235,6 @@ $card-height: auto;
 
 		#card-title {
 			display: inline-block;
-			height: 90px;
 			overflow: hidden;
 			margin-top: 0.35em;
 

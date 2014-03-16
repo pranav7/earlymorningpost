@@ -2,8 +2,10 @@
 <% if @news.empty? %>
 	<h2>Jim's dead.</h2>
 <% else %>
-	<% for news in @news %>
-		<%= render 'card', :news => news %>
-	<% end %>
+	<div class="cards-wrapper">
+		<% for news in @news %>
+			<%= render 'card', :news => news %>
+		<% end %>
+	</div>
 <% end %>
 </div>

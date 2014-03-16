@@ -18,6 +18,8 @@
 </ul>
 </div>
 
-<% for news in @news %>
-	<%= render 'card', :news => news %>
-<% end %>
+<div id="cards-wrapper">
+	<% for news in @news %>
+		<%= render 'card', :news => news %>
+	<% end %>
+</div>

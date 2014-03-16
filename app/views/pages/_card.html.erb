@@ -1,20 +1,22 @@
-<div class="large-6 columns">
-<section class="card">
+<div class="card">
 	<% if news.image? %>
 	<div class="image">
 		<%= image_tag news.image_url %>
 	</div>
 	<% end %>
-	<div class="categories">
-		<h2 class="card-captions floatL"><%= news.category.name.upcase %></h2>
-		<div class="filler"></div>
-		<h2 class="card-captions floatR"><%= news.created_at.to_formatted_s(:long_ordinal).upcase %> UTC</h2>
+	<div class="card-summary">
+		<div id="card-captions">
+			<h2>
+				<%= link_to news.category.name.upcase, "/#{news.category.name.downcase}" %>
+				|
+				<%= news.created_at.strftime("#{news.created_at.day.ordinalize} %B %y").upcase %>
+			</h2>
+		</div>
+		<div id="card-title">
+			<h1><%=link_to news.title, news %></h1>
+		</div>
+		<div id="card-content">
+			<p><%= truncate news.content, length: 180 %></p>
+		</div>
 	</div>
-	<div id="card-title">
-		<h1><%=link_to news.title, news %></h1>
-	</div>
-	<div class="card-content">
-		<p><%= news.content %></p>
-	</div>
-</section>
 </div>

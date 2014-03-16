@@ -9,24 +9,28 @@ class PagesController < ApplicationController
     @title = "Technology"
     @category = select_category
     @news = @category.news
+    @home_page = true
   end
 
   def sports
     @title = "Sports"
     @category = select_category
     @news = @category.news
+    @home_page = true
   end
 
   def world
     @title = "World"
     @category = select_category
     @news = @category.news
+    @home_page = true
   end
 
   def entertainment
     @title = "Entertainment"
     @category = select_category
     @news = @category.news
+    @home_page = true
   end
 
   def about

@@ -181,90 +181,97 @@ $content-color: #4E5860;
 	}
 }
 
+#cards-wrapper {
+	width: 100%;
+}
+
+
+$card-width: 400px;
+$card-height: auto;
+
 .card {
 	box-shadow: 0 1px 2px #aaa;
 	background: white;
 	margin-bottom: 1rem;
-	border-radius:3px;
+	border-radius: 3px;
 	transform-origin: top left; 
-	line-height:1.2;
-	width: em(350px);
-	height: 450px;
+	width: $card-width;
+	height: $card-height;
 	overflow: hidden;
 	vertical-align: top;
 
-	.card-captions {
-		font-family: $font-roboto-condensed !important;
-		font-size: 0.75rem;
-	}
-
-	a {
-		color: #2c3e50;
-	}
-
-	a:hover {
-		color: #6E6E6E;
-	}
-
-	#card-title {
-		margin: 0 1rem 0 1rem;
-		display: block;
-
-		h1 {
-			font-size: 1.5rem !important;
-			font-weight: 300 !important;
-			line-height:1.2 !important;
-			font-family: $font-stack !important;
-		}
-	}
-
 	.image {
 		width: 100%;
-		height: 47%;
+		height: 225px;
 		overflow: hidden;
 	}
 
-	h2 {
-		font-family: $font-stack !important; 
-		margin: 0.25rem 0.5rem 0 0.5rem;
-		font-size: 0.9rem;
-		line-height:2.5;
-		color: #969696;
-		font-weight:400;
-	}
-
-	.card-content {
-		margin: -2rem 1rem 0 1rem;
+	.card-summary {
+		width: 100%;
+		padding-bottom: 1em;
 		overflow: hidden;
+		padding: 0.75em;
 
-		p {
-			font-style: $font-roboto;
-			font-size: 0.8rem !important;
-			font-weight: 300 !important;
-			line-height: 1.6 !important;
-			color: #666666;
+		#card-captions {
+			display: inline-block;
+
+			h2 {
+				font-family: $font-roboto-condensed !important;
+				font-size: 0.75rem;
+				color: #969696 !important;
+				font-weight: 400;
+				display: inline;
+			}
+			a {
+				color: #969696;
+			}
+
+			a:hover {
+				color: #2c3e50;
+			}
+		}
+
+
+
+		#card-title {
+			display: inline-block;
+			height: 90px;
+			overflow: hidden;
+			margin-top: 0.35em;
+
+			h1 {
+				font-size: 1.5rem !important;
+				font-weight: 300 !important;
+				line-height: 1.2 !important;
+				font-family: $font-stack !important;
+				display: table-cell;
+			}
+			a {
+				color: #2c3e50;
+			}
+
+			a:hover {
+				color: #6E6E6E;
+			}
+		}
+
+		$line-height: 1.4;
+		$lines-to-show: 4;
+		$card-desc-font-size: 0.85rem;
+
+		#card-content {
+			overflow: hidden;
+			max-height: 60%;
+			margin-top: 0.25em;
+
+			p {
+				font-style: $font-roboto;
+				font-size: $card-desc-font-size;
+				font-weight: 300 !important;
+				line-height: $line-height;
+				color: #666666;
+				display: inline;
+			}
 		}
 	}
-}
-
-.floatL {
-	display: inline-block;
-	float: left;
-	margin-left: 0.5rem;
-	width: em(50px);
-}
-
-.filler {
-	display: inline-block;
-	width: auto;
-}
-
-.floatR {
-	display: inline-block;
-	float: right;
-	margin-right: 0.5rem;
-	text-align: right;
-	width: em(300px);
-	overflow: nowrap;
-	text-overflow: ellipsis;
 }

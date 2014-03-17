@@ -61,7 +61,22 @@ $content-color: #4E5860;
 .add-content {
     height: auto;
     font-size: 110%;
+    font-family: $font-noto;
+}
+
+.add-sub-heading {
+    height: auto;
     font-family: $font-stack;
+    font-weight: 300;
+	font-size: 1.25em;
+	color: #999999;
+}
+
+.add-title {
+    height: auto;
+   	font-size: 1.25em;
+    font-family: $font-roboto;
+    font-weight: 900;
 }
 
 /* Fields */

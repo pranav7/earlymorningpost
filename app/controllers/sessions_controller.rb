@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
 	def create
 		session[:password] = params[:session][:password]
-		redirect_to news_index_path, :flash => { :notice => "Welcome Pranav/Priyanka." }
+		redirect_to news_index_path, :flash => { :notice => "Welcome Priyanka-Pranav." }
 	end
 
 	def destroy

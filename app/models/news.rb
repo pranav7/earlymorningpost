@@ -33,4 +33,8 @@ class News < ActiveRecord::Base
 	# This sets the order of the news from New to Old, 
 	# based on when it was created.
 	default_scope -> { order('created_at DESC') }
+
+	def to_param
+		"#{id}+#{title.parameterize}"
+	end
 end

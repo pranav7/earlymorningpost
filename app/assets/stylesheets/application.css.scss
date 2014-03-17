@@ -15,11 +15,12 @@
 
 $font-stack: 'Roboto Slab', serif;
 $font-roboto: 'Roboto', sans-serif;
+$font-noto: 'Noto Serif', serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #4E5860;
 
 .logo {
-	padding: 10px;
+	padding: 1em;
 }
 
 .main {
@@ -231,8 +232,6 @@ $card-height: auto;
 			}
 		}
 
-
-
 		#card-title {
 			display: inline-block;
 			overflow: hidden;
@@ -242,8 +241,8 @@ $card-height: auto;
 				font-size: 1.5rem !important;
 				font-weight: 300 !important;
 				line-height: 1.2 !important;
-				font-family: $font-stack !important;
-				display: table-cell;
+				font-family: $font-stack;
+				display: inline;
 			}
 			a {
 				color: #2c3e50;
@@ -262,9 +261,12 @@ $card-height: auto;
 			overflow: hidden;
 			max-height: 60%;
 			margin-top: 0.25em;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical; 
 
 			p {
-				font-style: $font-roboto;
+				font-family: $font-roboto;
 				font-size: $card-desc-font-size;
 				font-weight: 300 !important;
 				line-height: $line-height;

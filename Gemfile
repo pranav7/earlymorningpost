@@ -42,6 +42,10 @@ gem 'protected_attributes'
 # Gems for handling images in News
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog'
+
+# FOG dependency
+gem 'multi_json'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

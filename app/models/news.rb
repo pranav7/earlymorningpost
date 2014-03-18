@@ -2,21 +2,25 @@
 #
 # Table name: news
 #
-#  id          :integer          not null, primary key
-#  title       :string(255)
-#  content     :text
-#  created_at  :datetime
-#  updated_at  :datetime
-#  category_id :integer
-#  sub_heading :text
-#  image       :string(255)
+#  id             :integer          not null, primary key
+#  title          :string(255)
+#  content        :text
+#  created_at     :datetime
+#  updated_at     :datetime
+#  category_id    :integer
+#  sub_heading    :text
+#  image          :string(255)
+#  author         :string(255)
+#  image_courtesy :string(255)
 #
 
 class News < ActiveRecord::Base
 	attr_accessible :title, 
 					:content, 
 					:category_id, 
-					:sub_heading, 
+					:sub_heading,
+					:author,
+					:image_courtesy, 
 					:image,
 					:remote_image_url
 

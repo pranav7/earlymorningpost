@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304074441) do
+ActiveRecord::Schema.define(version: 20140318222822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20140304074441) do
     t.integer  "category_id"
     t.text     "sub_heading"
     t.string   "image"
+    t.string   "author"
+    t.string   "image_courtesy"
   end
 
 end

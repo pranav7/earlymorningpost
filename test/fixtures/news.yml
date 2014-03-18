@@ -2,14 +2,16 @@
 #
 # Table name: news
 #
-#  id          :integer          not null, primary key
-#  title       :string(255)
-#  content     :text
-#  created_at  :datetime
-#  updated_at  :datetime
-#  category_id :integer
-#  sub_heading :text
-#  image       :string(255)
+#  id             :integer          not null, primary key
+#  title          :string(255)
+#  content        :text
+#  created_at     :datetime
+#  updated_at     :datetime
+#  category_id    :integer
+#  sub_heading    :text
+#  image          :string(255)
+#  author         :string(255)
+#  image_courtesy :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -1,11 +1,17 @@
-<h1><%= @news.title %></h1>
-<h4><%= @news.sub_heading %></h4>
-
+<div class="news-title">
+	<h1><%= @news.title %></h1>
+</div>
+<div class="news-sub-heading">
+	<h4><%= @news.sub_heading %></h4>
+<div>
 <span class="news-date">
 	<% if @news.created_at > 2.days.ago %>
 		<%= time_ago_in_words(@news.created_at).upcase %> AGO
 	<% else %>
 		<%= @news.created_at.to_formatted_s(:long_ordinal) %> UTC
+	<% end %>
+	<% if @news.author? %>
+		| <strong> BY <%= @news.author.upcase %> </strong>
 	<% end %>
 </span>
 
@@ -17,16 +23,26 @@
 									 :title => "Delete #{@news.title}",
 									 :class => 'button tiny alert' %>
 	</div>
-<% else %>
-	<div class="social-likes">
-		<div class="facebook" title="@news.title">Facebook</div>
-		<div class="twitter" title="@news.title">Twitter</div>
-		<div class="plusone" title="@news.title">Google+</div>
-	</div>
 <% end %>
 
 <div class='news-image'>
 	<%= image_tag @news.image_url if @news.image? %>
 </div>
+<% if @news.image_courtesy? %>
+<div class="image-courtesy">
+	Image Courtesy <%= @news.image_courtesy %>
+</div>
+<% end %>
 
-<%= simple_format @news.content %>
+<div class="social-likes social-likes_light">
+	<div class="facebook" title="Share this on Facebook">Facebook</div>
+	<div class="twitter" title="Tweet it!">Twitter</div>
+	<div class="plusone" title="Share this on Google+">Google+</div>
+	<div class="pinterest" title="Share image on Pinterest" data-media="">Pinterest</div>
+</div>
+
+<hr>
+
+<div class="news-content">
+	<%= simple_format @news.content %>
+</div>

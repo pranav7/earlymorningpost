@@ -8,6 +8,8 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
 
+$font-roboto-condensed: 'Roboto Condensed', sans-serif;
+
 // $experimental: true;
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
@@ -955,7 +957,7 @@ $preloader-class: "preloader";
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
 // $tabs-navigation-font-color: #222;
 // $tabs-navigation-font-size: rem-calc(16);
-// $tabs-navigation-font-family: $body-font-family;
+// $tabs-navigation-font-family: $font-roboto-condensed
 
 // $tabs-content-margin-bottom: rem-calc(24);
 // $tabs-content-padding: $column-gutter/2;
@@ -1012,12 +1014,12 @@ $preloader-class: "preloader";
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+ $topbar-bg-color: #1F1F1F;
+ $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+$topbar-height: 50px;
+// $topbar-margin-bottom: 1em;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: normal;
@@ -1034,15 +1036,15 @@ $preloader-class: "preloader";
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
+ $topbar-link-color-hover: #FFF154;
 // $topbar-link-color-active: #fff;
-// $topbar-link-weight: normal;
+ $topbar-link-weight: bold;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg-hover: #272727  ;
+$topbar-link-bg-hover: #1A1A1A  ;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
+$topbar-link-font-family: $font-roboto-condensed;
 
 // $topbar-button-font-size: 0.75rem;
 

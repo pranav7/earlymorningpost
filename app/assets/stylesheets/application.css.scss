@@ -35,8 +35,34 @@ $content-color: #4E5860;
 	background: #fff;
 }
 
+.navigation {
+	ul li {
+		font-weight: 700;
+	}
+}
+
 .side-bar {
 	margin-top: 1.5em;
+}
+
+.content {
+	h1 {
+		font-family: $font-roboto;
+		color: #2E3842;
+		font-weight: 900;
+		word-wrap: break-word;
+		margin-top: 1em;
+		font-size: 3.125em;
+		letter-spacing: 0.01em;
+		line-height: 1.15;
+	}
+	h4 {
+		font-family: $font-stack;
+		font-weight: 300;
+		font-size: 1.7em;
+		color: #999999;
+		margin-bottom: 0.5em;
+	}
 }
 
 /* Footer */
@@ -48,7 +74,7 @@ $content-color: #4E5860;
 
 .footer-top {
 	width: 100%;
-	background: #333333;
+	background: #1F1F1F;
 	padding: 10px;
 
 	ul.footer-nav {
@@ -69,7 +95,7 @@ $content-color: #4E5860;
 
 	a:hover {
 		font-weight: bold;
-		color: #ffffff;
+		color: #1A1A1A;
 	}
 }
 
@@ -92,13 +118,13 @@ $content-color: #4E5860;
 
 	li a:hover {
 		font-weight: bold;
-		color: #ffffff;
+		color: #FFF154;
 	}
 }
 
 .footer-bottom {
 	width: 100%;
-	background: #454545;
+	background: #363636;
 	color: #C4C4C4;
 }
 

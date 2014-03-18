@@ -18,6 +18,14 @@
 	<%= f.text_field :remote_image_url %>
 </div>
 <div class="field">
+	<%= f.label :image_courtesy  %>
+	<%= f.text_field :image_courtesy %>
+</div>
+<div class="field">
+	<%= f.label :author  %>
+	<%= f.text_field :author %>
+</div>
+<div class="field">
 	<%= collection_select :news, :category_id, Category.all, :id, :name, 
 	{ :prompt => 'Please select a cateogry' }, :class => 'dropdown' %>
 </div>

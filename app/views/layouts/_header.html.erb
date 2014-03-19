@@ -1,31 +1,39 @@
+<div class="header-wrapper">
 <div class="row collapse">
     <div class="logo large-4 offset-8 column">
       <%= link_to logoHeader, root_path  %>
     </div>    
-  </div>
+</div>
 
-  <div class="contain-to-grid sticky"> 
+<div class="contain-to-grid sticky"> 
 
-    <nav class="top-bar" data-topbar>
+  <nav class="top-bar" data-topbar>
 
-      <section class="top-bar-section navigation">
-        <!-- Left Nav Section -->
-        <ul class="left">
-          <li><%= link_to "HOME",            root_path   %></li>
-          <li><%= link_to "TECHNOLOGY",      technology_path  %></li>
-          <li><%= link_to "SPORTS",          sports_path   %></li>
-          <li><%= link_to "ENTERTAINMENT",   entertainment_path   %></li>
-          <li><%= link_to "WORLD",           world_path  %></li>
+    <ul class="title-area">
+      <li class="name">
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section navigation">
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><%= link_to "HOME",            root_path   %></li>
+        <li><%= link_to "TECHNOLOGY",      technology_path  %></li>
+        <li><%= link_to "SPORTS",          sports_path   %></li>
+        <li><%= link_to "ENTERTAINMENT",   entertainment_path   %></li>
+        <li><%= link_to "WORLD",           world_path  %></li>
+      </ul>
+
+      <% if admin? %>
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><%= link_to "Manage", news_index_path %></li>
+           <li class="divider"></li>
+          <li><%= link_to "Logout", byebye_path %></li>
         </ul>
-
-        <% if admin? %>
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li><%= link_to "Manage", news_index_path %></li>
-             <li class="divider"></li>
-            <li><%= link_to "Logout", byebye_path %></li>
-          </ul>
-        <% end %>
-      </section>
-    </nav> 
-  </div>
+      <% end %>
+    </section>
+  </nav> 
+</div>
+</div>

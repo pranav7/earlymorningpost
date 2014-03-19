@@ -19,8 +19,13 @@ $font-noto: 'Noto Serif', serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #4E5860;
 
-.logo {
-	padding: 1em;
+
+.header-wrapper {
+
+	.logo {
+		padding: 1em;
+		width: 120px;
+	}
 }
 
 .main {
@@ -68,13 +73,13 @@ $content-color: #4E5860;
 /* Footer */
 .footer-top-border {
 	background: #FFE44A;
-	padding: 2px;
+	padding: 3px;
 	margin-top: 5%;
 }
 
 .footer-top {
 	width: 100%;
-	background: #1F1F1F;
+	background: #05131F;
 	padding: 10px;
 
 	ul.footer-nav {
@@ -124,11 +129,9 @@ $content-color: #4E5860;
 
 .footer-bottom {
 	width: 100%;
-	background: #363636;
+	background: #000D17;
 	color: #C4C4C4;
-}
 
-.footer-bottom {
 	p {
 		margin-top: 10px;
 		text-align: left;

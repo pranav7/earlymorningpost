@@ -1,10 +1,10 @@
-<div class="news-title">
+<!-- <div class="news-title"> -->
 	<h1><%= @news.title %></h1>
-</div>
-<div class="news-sub-heading">
+<!-- </div> -->
+<!-- <div class="news-sub-heading"> -->
 	<h4><%= @news.sub_heading %></h4>
-<div>
-<span class="news-date">
+<!-- <div> -->
+<div class="news-date">
 	<% if @news.created_at > 2.days.ago %>
 		<%= time_ago_in_words(@news.created_at).upcase %> AGO
 	<% else %>
@@ -13,7 +13,7 @@
 	<% if @news.author? %>
 		| <strong> BY <%= @news.author.upcase %> </strong>
 	<% end %>
-</span>
+</div>
 
 <% if admin? %>
 	<div class="admin-buttons">
@@ -29,9 +29,9 @@
 	<%= image_tag @news.image_url if @news.image? %>
 </div>
 <% if @news.image_courtesy? %>
-<div class="image-courtesy">
-	Image Courtesy <%= @news.image_courtesy %>
-</div>
+	<div class="image-courtesy">
+		Image Courtesy <%= @news.image_courtesy %>
+	</div>
 <% end %>
 
 <div class="social-likes social-likes_light">
@@ -43,6 +43,4 @@
 
 <hr>
 
-<div class="news-content">
-	<%= simple_format @news.content %>
-</div>
+<%= simple_format @news.content %>

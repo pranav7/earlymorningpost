@@ -13,10 +13,8 @@ $content-color: #4E5860;
 	word-wrap: break-word;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-}
 
-.news-title {
-
+	// Main Headings
 	h1, h2 {
 		font-family: $font-roboto;
 		color: #2E3842;
@@ -27,10 +25,8 @@ $content-color: #4E5860;
 		letter-spacing: 0.01em;
 		line-height: 1.15;
 	}
-}
 
-.news-sub-heading {
-
+	// Sub Heading
 	h4 {
 		font-family: $font-stack;
 		font-weight: 300;
@@ -38,10 +34,8 @@ $content-color: #4E5860;
 		color: #999999;
 		margin-bottom: 0.5em;
 	}
-}
 
-.news-content {
-
+	// Content
 	p {
 		font-family: $font-noto;
 		font-style: normal;
@@ -183,10 +177,13 @@ ul.news-list li {
 .news-image{
 	display: block;
 	margin-top: 2em;
-	widows: 100%;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
 	img {
 		display: block;
 		vertical-align: middle;
+		width: 100%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -198,8 +195,7 @@ ul.news-list li {
 	font-family: $font-roboto;
 	float: right;
 	color: #999999;
-	margin-top: 0.35em !important;
-	margin-right: 10em !important;
+	margin-top: 0.45em !important;
 }
 
 .social-likes {

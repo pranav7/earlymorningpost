@@ -231,7 +231,7 @@ $content-color: #4E5860;
 	width: 100%;
 }
 
-$card-width: 25em;
+$card-width: 100%;
 $card-height: auto;
 
 .card {
@@ -239,7 +239,8 @@ $card-height: auto;
 	background: white;
 	margin-bottom: 1rem;
 	border-radius: 3px;
-	transform-origin: top left; 
+	transform-origin: top left;
+	max-width: 25em !important;
 	width: $card-width;
 	height: $card-height;
 	overflow: hidden;

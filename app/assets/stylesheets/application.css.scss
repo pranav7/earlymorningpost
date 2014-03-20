@@ -20,6 +20,11 @@ $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #4E5860;
 
 
+.body {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
 .header-wrapper {
 
 	.logo {
@@ -67,6 +72,15 @@ $content-color: #4E5860;
 		font-size: 1.7em;
 		color: #999999;
 		margin-bottom: 0.5em;
+	}
+}
+
+#page-title {
+	h2 {
+		font-family: $font-stack;
+		font-weight: 300;
+		font-size: 2em;
+		color: #BABABA;
 	}
 }
 
@@ -213,6 +227,7 @@ $content-color: #4E5860;
 }
 
 #cards-wrapper {
+	margin-top: 2em !important;
 	width: 100%;
 }
 

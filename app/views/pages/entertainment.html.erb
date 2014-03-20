@@ -1,4 +1,8 @@
 <div class="main">
+<div id="page-title">
+	<h2><%= @title.upcase %></h2>
+</div>
+<hr>
 <% if @news.empty? %>
 	<h2>Jim's dead.</h2>
 <% else %>

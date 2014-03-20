@@ -321,3 +321,26 @@ $card-height: auto;
 		}
 	}
 }
+
+.follow-us {
+	float: left;
+	margin-top: 3.5em;
+
+	span {
+		font-family: $font-roboto-condensed;
+		font-weight: 300 !important;
+		font-size: 90%;
+		display:inline-block;
+		vertical-align:top;
+		margin-right:5px;
+		margin-top:8px;
+		color: #C4C4C4;
+	}
+
+	img {
+		border:0;
+		//width:32px;
+		//height:32px;
+		margin-left: 1px;
+	}
+}

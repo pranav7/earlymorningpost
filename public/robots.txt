@@ -10,4 +10,4 @@ Disallow: /news/new
 Disallow: /news/edit
 
 
-Sitemap: http://www.earlymorningpost.com/sitemap.xml.gz
+Sitemap: http://EarlyMorningPost.s3.amazonaws.com/sitemaps/sitemap1.xml.gz

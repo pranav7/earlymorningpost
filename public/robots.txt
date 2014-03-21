@@ -4,10 +4,11 @@
 # User-agent: *
 # Disallow: /
 
+User-agent: *
 Disallow: /nimda
 Disallow: /byebye
 Disallow: /news/new
 Disallow: /news/edit
 
 
-Sitemap: http://EarlyMorningPost.s3.amazonaws.com/sitemaps/sitemap1.xml.gz
+Sitemap: https://s3.amazonaws.com/EarlyMorningPost/sitemaps/sitemap1.xml.gz

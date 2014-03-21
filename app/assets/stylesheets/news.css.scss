@@ -4,7 +4,7 @@
 
 $font-stack: 'Roboto Slab', serif;
 $font-roboto: 'Roboto', sans-serif;
-$font-noto: 'Noto Serif', serif;
+$font-content: 'Enriqueta', serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #4E5860;
 
@@ -36,7 +36,7 @@ $content-color: #4E5860;
 
 	// Content
 	p {
-		font-family: $font-noto;
+		font-family: $font-content;
 		font-style: normal;
 		font-size: 125%;
 		color: $content-color;
@@ -61,7 +61,7 @@ $content-color: #4E5860;
 .add-content {
     height: auto;
     font-size: 110%;
-    font-family: $font-noto;
+    font-family: $font-content;
 }
 
 .add-sub-heading {
@@ -198,7 +198,7 @@ ul.news-list li {
 
 .social-likes {
 	vertical-align: middle;
-
+	margin-top: 0.75em !important;
 	display: inline-block;
 
 	.facebook {

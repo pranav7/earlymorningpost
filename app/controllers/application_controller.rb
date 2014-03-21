@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protected
 
   	def admin?
-  		session[:password] == 'foobar'
+  		session[:password] == 'Rap+0r911'
   	end
 
   	def authenticate

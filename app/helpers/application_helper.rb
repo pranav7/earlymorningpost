@@ -2,7 +2,7 @@ module ApplicationHelper
 
 	#Returns a title as per the page
 	def title
-		base_title = "The Early Morning Post"
+		base_title = "Early Morning Post"
 		if @title.nil?
 			base_title
 		else

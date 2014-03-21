@@ -39,6 +39,9 @@ gem 'jbuilder', '~> 1.2'
 # Protect attributes from mass-assignment in ActiveRecord models.
 gem 'protected_attributes'
 
+# SiteMap.xml for Google Search
+gem 'sitemap_generator'
+
 # Gems for handling images in News
 gem 'carrierwave'
 gem 'mini_magick'

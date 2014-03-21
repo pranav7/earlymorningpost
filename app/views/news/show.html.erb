@@ -34,12 +34,28 @@
 	</div>
 <% end %>
 
-<div class="social-likes social-likes_light">
+<div class="social-likes">
+	<div class="fb-share-button" 
+		 data-href='#{request.full_path}'
+		 data-type="button_count"></div>
+	<div class="google">
+		<div class="g-plusone"></div>
+		<%= javascript_include_tag 'google-plus' %>
+	</div>
+	<div class="twitter">
+		<a 	href="https://twitter.com/share" 
+			class="twitter-share-button" 
+			data-lang="en">Tweet</a>
+		<%= javascript_include_tag 'twitter' %>
+	</div>
+</div>
+
+<!-- <div class="social-likes social-likes_light">
 	<div class="facebook" title="Share this on Facebook">Facebook</div>
 	<div class="twitter" title="Tweet it!">Twitter</div>
 	<div class="plusone" title="Share this on Google+">Google+</div>
 	<div class="pinterest" title="Share image on Pinterest" data-media="">Pinterest</div>
-</div>
+</div> -->
 
 <hr>
 

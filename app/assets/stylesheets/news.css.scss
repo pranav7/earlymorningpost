@@ -198,6 +198,21 @@ ul.news-list li {
 
 .social-likes {
 	vertical-align: middle;
-	margin-top: 0.75em !important;
+
 	display: inline-block;
+
+	.facebook {
+		display: inline-block;
+		margin-top: 0.75em !important;
+	}
+
+	.google {
+		display: inline-block;
+		margin-top: 0.75em !important;
+	}
+
+	.twitter {
+		display: inline-block;
+		margin-top: 0.75em !important;
+	}
 }

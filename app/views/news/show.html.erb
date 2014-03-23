@@ -2,7 +2,7 @@
   <!-- Normal Tags -->
   <meta name="title" content="<%= @news.title %>"/>
   <meta name="description" content="<%= @news.content[0..155] %>"/>
-  <meta name="keywords" content="<%= %W[#{@news.category.name} News] %>"/>
+  <meta name="keywords" content="<%= %W[#{@news.category.name} News Google Facebook] %>"/>
 
   <!-- Schema.org markup for Google+ -->
   <meta itemprop="name" content="<%= @news.title %>">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="<%= @news.image_url %>"/>
   <meta property="og:url" content="<%= request.url %>"/>
-  <meta property="og:description" content="<%= @news.content[0..150] %>"/>
+  <meta property="og:description" content="<%= @news.content[0..155] %>"/>
   <meta property="og:site_name" content="Early Morning Post" />
   <meta property="article:section" content="<%= @news.category.name %>" />
   <meta property="article:tag" content="<%= %W[#{@news.category.name} News] %>" />

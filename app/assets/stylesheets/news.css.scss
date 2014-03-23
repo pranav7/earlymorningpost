@@ -5,6 +5,7 @@
 $font-stack: 'Roboto Slab', serif;
 $font-roboto: 'Roboto', sans-serif;
 $font-content: 'Enriqueta', serif;
+$font-heading: 'Chivo', sans-serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #4E5860;
 
@@ -16,13 +17,13 @@ $content-color: #4E5860;
 
 	// Main Headings
 	h1, h2 {
-		font-family: $font-roboto;
-		color: #2E3842;
-		font-weight: 900;
+		font-family: $font-heading;
+		color: #081E30;
+		//font-weight: 900;
 		word-wrap: break-word;
 		margin-top: 1em;
 		font-size: 3.125em;
-		letter-spacing: 0.01em;
+		letter-spacing: -0.04em;
 		line-height: 1.15;
 	}
 
@@ -32,6 +33,7 @@ $content-color: #4E5860;
 		font-weight: 300;
 		font-size: 1.7em;
 		color: #999999;
+		line-height: 1.15;
 	}
 
 	// Content
@@ -50,7 +52,6 @@ $content-color: #4E5860;
 	font-size: 85%;
 	color: #999999;
 	margin-right: 2em;
-	letter-spacing: 1px !important;
 }
 
 .admin-buttons {

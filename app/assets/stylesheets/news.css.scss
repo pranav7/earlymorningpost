@@ -35,6 +35,10 @@ $content-color: #4E5860;
 		color: #999999;
 		line-height: 1.15;
 	}
+}
+
+#news-content{
+	margin-bottom: 8em;
 
 	// Content
 	p {
@@ -216,4 +220,16 @@ ul.news-list li {
 		display: inline-block;
 		margin-top: 0.75em !important;
 	}
+}
+
+#comments {
+	margin-top: 2em !important;
+
+	h3 {
+		font-family: $font-roboto-condensed;
+		font-size: 98%;
+		font-weight: 300;
+		color: #999999;
+	}
+
 }

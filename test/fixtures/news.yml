@@ -12,6 +12,7 @@
 #  image          :string(255)
 #  author         :string(255)
 #  image_courtesy :string(255)
+#  video_url      :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

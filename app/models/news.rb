@@ -12,6 +12,7 @@
 #  image          :string(255)
 #  author         :string(255)
 #  image_courtesy :string(255)
+#  video_url      :string(255)
 #
 
 class News < ActiveRecord::Base
@@ -22,7 +23,8 @@ class News < ActiveRecord::Base
 					:author,
 					:image_courtesy, 
 					:image,
-					:remote_image_url
+					:remote_image_url,
+					:video_url
 
 	belongs_to :category
 

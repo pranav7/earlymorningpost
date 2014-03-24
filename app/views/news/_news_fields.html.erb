@@ -26,6 +26,10 @@
 	<%= f.text_field :author %>
 </div>
 <div class="field">
+	<%= f.label 'YouTube Video ID'  %>
+	<%= f.text_field :video_url %>
+</div>
+<div class="field">
 	<%= collection_select :news, :category_id, Category.all, :id, :name, 
 	{ :prompt => 'Please select a cateogry' }, :class => 'dropdown' %>
 </div>

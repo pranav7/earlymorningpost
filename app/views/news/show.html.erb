@@ -42,11 +42,11 @@
 
 <% if admin? %>
 	<div class="admin-buttons">
-		<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny' %>
+		<%= link_to 'Edit', edit_news_path(@news), :class => 'button tiny radius' %>
 		<%= link_to 'Delete', @news, :method => :delete,
 									 :confirm => "Are you sure?",
 									 :title => "Delete #{@news.title}",
-									 :class => 'button tiny alert' %>
+									 :class => 'button tiny alert radius' %>
 	</div>
 <% end %>
 
@@ -72,6 +72,16 @@
 	<%= simple_format @news.content %>
 </div>
 
+<% if @news.video_url? %>
+	<div class="embedded-video">
+		<iframe src="//www.youtube.com/embed/<%= @news.video_url %>?wmode=opaque"
+				id="iFrame"
+				frameborder="0"
+				width="100%"
+				height="640px">
+		</iframe>
+	</div>
+<% end %>
 
 <div id="comments">
 	<hr>

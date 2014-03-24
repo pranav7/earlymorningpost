@@ -12,8 +12,6 @@ $content-color: #4E5860;
 /* Main Content */
 .content {
 	word-wrap: break-word;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
 
 	// Main Headings
 	h1, h2 {
@@ -231,5 +229,13 @@ ul.news-list li {
 		font-weight: 300;
 		color: #999999;
 	}
+}
 
+.embedded-video {
+	margin-top: -5em;
+	margin-bottom: 7em;
+
+	#iFrame {
+		width: 100%;
+	}
 }

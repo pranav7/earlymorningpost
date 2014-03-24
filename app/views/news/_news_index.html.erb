@@ -3,9 +3,9 @@
 </span>
 <span class="index-description">
 	<span class='index-date'><%= news.created_at.strftime("%d %b %y") %></span>
-	<%= link_to 'Edit', edit_news_path(news), :class => 'button tiny' %>
+	<%= link_to 'Edit', edit_news_path(news), :class => 'button tiny radius' %>
 	<%= link_to 'Delete', news, :method => :delete,
 							:confirm => "Are you sure?",
 							:title => "Delete #{news.title}",
-							:class => 'button tiny alert' %>
+							:class => 'button tiny alert radius' %>
 </span>

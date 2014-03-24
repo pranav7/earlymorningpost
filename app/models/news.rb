@@ -37,8 +37,8 @@ class News < ActiveRecord::Base
 	mount_uploader :image, ImageUploader
 
 	# This sets the order of the news from New to Old, 
-	# based on when it was created.
-	default_scope -> { order('created_at DESC') }
+	# based on when it was updated.
+	default_scope -> { order('updated_at DESC') }
 
 
 	def to_param

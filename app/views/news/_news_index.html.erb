@@ -2,7 +2,11 @@
 	<%= link_to news.title, news %>
 </span>
 <span class="index-description">
-	<span class='index-date'><%= news.created_at.strftime("%d %b %y") %></span>
+	<span class='index-date'>
+		<%= news.category.name %>
+		|
+		<%= news.created_at.strftime("%d %b %y") %>
+	</span>
 	<%= link_to 'Edit', edit_news_path(news), :class => 'button tiny radius' %>
 	<%= link_to 'Delete', news, :method => :delete,
 							:confirm => "Are you sure?",

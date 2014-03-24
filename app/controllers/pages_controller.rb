@@ -11,8 +11,8 @@ class PagesController < ApplicationController
     @home_page = true
   end
 
-  def sports
-    @title = "Sports"
+  def science
+    @title = "Science"
     @category = select_category
     @news = @category.news
     @home_page = true

@@ -4,7 +4,7 @@ Earlymorningpost::Application.routes.draw do
   root :to => 'pages#home'
 
   match "/technology",     :to => "pages#technology", :via => :get
-  match "/sports",         :to => "pages#sports", :via => :get
+  match "/science",        :to => "pages#science", :via => :get
   match "/world",          :to => "pages#world", :via => :get
   match "/entertainment",  :to => "pages#entertainment", :via => :get
   match "/about",          :to => "pages#about", :via => :get

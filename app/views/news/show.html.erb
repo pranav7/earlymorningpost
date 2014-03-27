@@ -27,7 +27,8 @@
   <meta name="twitter:image:src" content="@news.image_url">
 <% end %>
 
-<h1><%= @news.title %></h1>
+<div itemscope itemtype="http://schema.org/Article">
+<h1 itemprop="name"><%= @news.title %></h1>
 <h4><%= @news.sub_heading %></h4>
 <div class="news-date">
 	<% if @news.created_at > 2.days.ago %>
@@ -51,7 +52,7 @@
 <% end %>
 
 <div class='news-image'>
-	<%= image_tag @news.image_url if @news.image? %>
+	<span itemprop="image"><%= image_tag @news.image_url if @news.image? %></span>
 </div>
 <% if @news.image_courtesy? %>
 	<div class="image-courtesy">
@@ -69,7 +70,7 @@
 <hr>
 
 <div id="news-content">
-	<%= simple_format @news.content %>
+	<span itemprop="description"><%= simple_format @news.content %></span>
 </div>
 
 <% if @news.video_url? %>
@@ -90,4 +91,5 @@
 	<%= javascript_include_tag 'disqus' %>
 	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
 </div>

@@ -24,12 +24,18 @@ html, html a {
 	-moz-font-smoothing: antialiased !important;
 }
 
+
 .header-wrapper {
 
 	.logo {
 		padding: 1em;
 		width: 8.5em;
 		padding-left: 1em !important;
+	}
+
+	.header-ad {
+		float: right;
+		padding-right: 1em !important;
 	}
 }
 

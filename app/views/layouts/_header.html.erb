@@ -1,7 +1,15 @@
 <div class="header-wrapper">
 <div class="row collapse">
-    <div class="logo large-2 offset-6 column">
+    <div class="logo large-2 column">
       <%= link_to logoHeader, root_path  %>
+    </div>
+    <div class="header-ad" align="right">
+      <%= javascript_include_tag "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", :async => true %><!-- Header-Banner-Unit -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-8853705788192995"
+           data-ad-slot="1272720864"></ins>
+      <%= javascript_include_tag 'google-ad' %>
     </div>
 </div>
 

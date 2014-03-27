@@ -13,10 +13,10 @@
 			</h2>
 		</div>
 		<div id="card-title">
-			<h1><%=link_to news.title, news %></h1>
+			<h1 itemprop="name"><%=link_to news.title, news, :itemprop => "#{request.url}#{news_path(news)}" %></h1>
 		</div>
 		<div id="card-content">
-			<p><%= simple_format news.content[0..200] %>...</p>
+			<p itemprop="description"><%= simple_format news.content[0..200] %>...</p>
 		</div>
 	</div>
 </div>

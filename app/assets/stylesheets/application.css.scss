@@ -34,8 +34,19 @@ html, html a {
 	}
 
 	.header-ad {
+		width: auto;
+		max-width: 100%;
+		margin-top: 3em !important;
 		padding-right: 1em !important;
+		overflow: hidden;
 	}
+}
+
+.side-ad {
+	width: auto;
+	max-width: 100%;
+	padding: 0.5em;
+	margin-top: 2em;
 }
 
 .main {

@@ -44,8 +44,8 @@ html, html a {
 
 .side-ad {
 	width: auto;
+	padding-right: 2em;
 	max-width: 100%;
-	padding: 0.5em;
 	margin-top: 2em;
 }
 
@@ -195,8 +195,7 @@ html, html a {
 .slideshow-wrapper {
 	margin-top: 1.5em;
 	overflow: hidden;
-	position: relative;
-	width: 92% !important;
+	width: 100% !important;
 
 	.example-orbit {
 		list-style: none outside none; 
@@ -206,12 +205,14 @@ html, html a {
 	}
 
 	.image-container {
-		height: 400px;
+		height: 25em;
 		width: 100%;
 		overflow: hidden;
 
 		img {
-			width: 100%;
+			min-width: 100%;
+			height: auto;
+			min-height: 100%;
 		}
 	}
 

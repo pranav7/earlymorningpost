@@ -14,6 +14,7 @@ Earlymorningpost::Application.routes.draw do
 
   match "sitemap",         :to => "sitemap#sitemap", :via => :get
   match "rssfeed",         :to => 'sitemap#rssfeed',   :via => :get
+  match "BingSiteAuth",:to => "sitemap#BingSiteAuth", :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

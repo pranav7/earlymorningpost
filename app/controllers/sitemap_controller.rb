@@ -8,4 +8,8 @@ class SitemapController < ApplicationController
 		@news = News.order(:created_at)
 	end
 
+	def BingSiteAuth
+		#nothing here as such!
+	end
+
 end

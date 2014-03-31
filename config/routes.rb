@@ -12,6 +12,9 @@ Earlymorningpost::Application.routes.draw do
   match "/nimda",          :to => "sessions#new", :via => :get
   match "/byebye",         :to => "sessions#destroy", :via => :get
 
+  match "sitemap",         :to => "sitemap#sitemap", :via => :get
+  match "rssfeed",         :to => 'sitemap#rssfeed',   :via => :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

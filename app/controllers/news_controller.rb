@@ -16,7 +16,6 @@ class NewsController < ApplicationController
 	def create
 		@news = News.new(params[:news])
 		if @news.save
-			#redirection to implemented
 			redirect_to @news, :flash => { :notice => "News Posted!"}
 		else
 			render 'new'
@@ -36,7 +35,6 @@ class NewsController < ApplicationController
 	def update
 		@news = News.find(params[:id])
 		if @news.update_attributes(params[:news])
-			#redirection to implemented
 			redirect_to @news, :flash => { :notice => "News Updated!" }
 		else
 			@title = "Edit"

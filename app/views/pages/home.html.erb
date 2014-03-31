@@ -3,7 +3,7 @@
 <div class="preloader"></div>
 <ul class="example-orbit" data-orbit>
 	<% for news in @news %>
-		<% if news.image? and news.created_at > 2.days.ago %>
+		<% if news.image? and news.created_at > 3.days.ago %>
 			<li>
 				<div class="image-container">
 					<%= image_tag news.image_url %>

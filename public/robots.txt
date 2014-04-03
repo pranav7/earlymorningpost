@@ -3,12 +3,3 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-agent: *
 # Disallow: /
-
-User-agent: *
-Disallow: /nimda
-Disallow: /byebye
-Disallow: /news/new
-Disallow: /news/edit
-
-
-Sitemap: https://s3.amazonaws.com/EarlyMorningPost/sitemaps/sitemap1.xml.gz

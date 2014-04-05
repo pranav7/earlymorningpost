@@ -275,11 +275,7 @@ $card-height: auto;
 			width: 100%;
 
 			h2 {
-				font-family: $font-roboto-condensed !important;
-				font-size: 0.75rem;
-				color: #969696 !important;
-				font-weight: 400;
-				display: inline;
+
 			}
 			a {
 				color: #969696;
@@ -287,6 +283,22 @@ $card-height: auto;
 
 			a:hover {
 				color: #2c3e50;
+			}
+
+			.card-date {
+				font-family: $font-roboto !important;
+				font-size: 0.75rem;
+				color: #969696 !important;
+				font-weight: 300;
+				display: inline;
+			}
+
+			.card-category {
+				font-family: $font-roboto-condensed !important;
+				font-size: 0.75rem;
+				color: #969696 !important;
+				font-weight: 300;
+				display: inline;
 			}
 		}
 

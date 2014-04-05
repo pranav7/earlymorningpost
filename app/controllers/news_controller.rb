@@ -6,7 +6,7 @@ class NewsController < ApplicationController
 		@news = News.order(:created_at).page(params[:page])
 		@title = "Index"
 	end
-
+	
 	def new
 		@news = News.new
 		@category = Category.all

@@ -6,11 +6,17 @@
 	<% end %>
 	<div class="card-summary">
 		<div id="card-captions">
-			<h2>
+			<span class="card-category">
 				<%= link_to news.category.name.upcase, "/#{news.category.name.downcase}" %>
-				|
-				<%= news.created_at.strftime("#{news.created_at.day.ordinalize} %B %y").upcase %>
-			</h2>
+			|
+			</span>
+			<span class="card-date">
+			<% if news.created_at > 2.days.ago %>
+				<%= time_ago_in_words(news.created_at) %> ago
+			<% else %>
+				<%= news.created_at.strftime("#{news.created_at.day.ordinalize} %B %y") %>
+			<% end %>
+			</span>
 		</div>
 		<div id="card-title">
 			<h1 itemprop="name"><%=link_to news.title, news, :itemprop => "#{request.url}#{news_path(news)}" %></h1>

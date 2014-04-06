@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 4.0.0'
 
 # Use Zurb Foundation
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 # Use Uglifier as compressor for JavaScript asses
 gem 'uglifier', '>= 1.3.0'

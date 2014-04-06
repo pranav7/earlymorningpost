@@ -26,6 +26,7 @@ class News < ActiveRecord::Base
 					:remote_image_url,
 					:video_url
 
+	paginates_per 20
 	belongs_to :category
 
 	# Validations, a news should have a Content, Title and Category ID.

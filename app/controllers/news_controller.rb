@@ -3,7 +3,7 @@ class NewsController < ApplicationController
 	before_filter :authenticate, :except => :show
 
 	def index
-		@news = News.order(:created_at).page(params[:page])
+		@news = News.order(:created_at).page params[:page]
 		@title = "Index"
 	end
 	

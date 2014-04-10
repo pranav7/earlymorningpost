@@ -15,7 +15,7 @@
 
 $font-stack: 'Roboto Slab', serif;
 $font-roboto: 'Roboto', sans-serif;
-$font-noto: 'Enriqueta', serif;
+$font-content: 'Enriqueta', serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #4E5860;
 
@@ -97,6 +97,25 @@ html, html a {
 		font-size: 1.7em;
 		color: #999999;
 		margin-bottom: 0.5em;
+	}
+}
+
+/* Center a Div */
+.center {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+}
+
+#about-description {
+	p {
+		font-family: $font-content;
+		font-style: normal;
+		font-size: 125%;
+		color: $content-color;
+		line-height: 1.8;
+		letter-spacing: 0.01em;
 	}
 }
 
@@ -253,6 +272,8 @@ html, html a {
 
 #cards-wrapper {
 	margin-top: 2em !important;
+	margin-left: auto;
+	margin-right: auto;
 	width: 100%;
 }
 
@@ -265,7 +286,7 @@ $card-height: auto;
 	margin-bottom: 1rem;
 	border-radius: 3px;
 	transform-origin: top left;
-	max-width: 25em !important;
+	max-width: 28em !important;
 	width: $card-width;
 	height: $card-height;
 	overflow: hidden;

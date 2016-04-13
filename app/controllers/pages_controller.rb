@@ -42,7 +42,7 @@ class PagesController < ApplicationController
 
   private
 
-    def select_category
-      Category.find_by_name(@title)
-    end
+  def select_category
+    Category.find_by_name(@title)
+  end
 end

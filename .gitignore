@@ -18,3 +18,4 @@
 # Ignore all uploaded images
 /public/uploads/news/image
 /public/uploads/tmp
+.env

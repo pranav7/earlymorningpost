@@ -1,21 +1,20 @@
-
 <div class="slideshow-wrapper">
-<div class="preloader"></div>
-<ul class="example-orbit" data-orbit>
-	<% for news in @news %>
-		<% if news.image? and news.created_at > 3.days.ago %>
-			<li>
-				<div class="image-container">
-					<%= image_tag news.image_url %>
-				</div>
-			    <div class="orbit-caption">
-  					<div class="title"><%= link_to news.title, news %></div>
-  					<div class="category"><%= news.category.name %></div>
-				</div>
-			</li>
-		<% end %>
-	<% end %>
-</ul>
+  <div class="preloader"></div>
+  <ul class="example-orbit" data-orbit>
+    <% @news.last(5).each do |news| %>
+      <% if news.image? %>
+        <li>
+          <div class="image-container">
+            <%= image_tag news.image_url %>
+          </div>
+            <div class="orbit-caption">
+              <div class="title"><%= link_to news.title, news %></div>
+              <div class="category"><%= news.category.name %></div>
+          </div>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
 </div>
 
 <div id="cards-wrapper">

@@ -61,6 +61,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'spork'
+  gem 'dotenv-rails'
 end
 
 group :test do

@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
 	def new
 		@title = "Welcome, the Keymaker!"
 	end
@@ -13,5 +12,4 @@ class SessionsController < ApplicationController
 		reset_session
 		redirect_to root_path, :flash => { :notice => "Come back soon!" }
 	end
-
 end

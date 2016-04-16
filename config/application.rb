@@ -8,6 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module Earlymorningpost
   class Application < Rails::Application
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'javascripts')
 
     config.generators do |g| 
         g.test_framework :rspec, 

@@ -1,0 +1,14 @@
+.slideshow-wrapper
+  .preloader
+  %ul.example-orbit{ "data-orbit": true }
+    - @news.last(5).each do |news|
+      - if news.image?
+        %li
+          .image-container
+            = image_tag news.image_url
+          .orbit-caption
+            .title= link_to news.title, news
+            .category= news.category.name
+#cards-wrapper
+  - for news in @news
+    = render 'card', :news => news

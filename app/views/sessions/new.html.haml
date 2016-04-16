@@ -1,0 +1,8 @@
+%h1 Hi, fellow Earthling
+%h4 Do you know how to get in?
+= form_for(:session, :url => sessions_path) do |f|
+  .field
+    = f.label :password
+    = f.password_field :password
+  .actions
+    = f.submit "Let's do this!", :class => "button"

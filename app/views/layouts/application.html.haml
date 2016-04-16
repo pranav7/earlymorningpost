@@ -1,0 +1,57 @@
+!!!
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7 ] <html class="ie6" lang="en">
+/[if IE 7 ] <html class="ie7" lang="en">
+/[if IE 8 ] <html class="ie8" lang="en">
+/[if IE 9 ] <html class="ie9" lang="en">
+/ [if (gt IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}/
+    / Uncomment to make IE8 render like IE7
+    / <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    / Set the viewport width to device width for mobile
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Early Morning Post", :name => "application-name"}/
+    %meta{:content => "D9B2E54E17C77607F44057A2C737B103", :name => "msvalidate.01"}/
+    - if content_for?(:head)
+      = yield(:head)
+    - else
+      %meta{:content => "Early Morning Post", :name => "title"}/
+      %meta{:content => "News, Technology, Information, Google, Facebook, World", :name => "keywords"}/
+      %meta{:content => "Early Morning Post", :name => "title"}/
+      %meta{:content => "Early Morning Post", :property => "og:title"}/
+      %meta{:content => "website", :property => "og:type"}/
+      %meta{:content => "www.earlymorningpost.com", :property => "og:url"}/
+      %meta{:content => "Early Morning Post news about Technology, World, and everything else.", :property => "og:description"}/
+      %meta{:content => "Early Morning Post news about Technology, World, and everything else.", :property => "description"}/
+    %title= title
+    / RSS FEED Link Tag
+    = auto_discovery_link_tag(:rss, "http://www.earlymorningpost.com")
+    / Google Authorship and Publisher Markup
+    %link{:href => "https://plus.google.com/+Earlymorningpost7/posts", :rel => "author"}/
+    %link{:href => "https://plus.google.com/+Earlymorningpost7", :rel => "publisher"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,300,900,100", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Enriqueta", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Chivo:900", :rel => "stylesheet", :type => "text/css"}/
+    = favicon_link_tag    'favicon.ico'
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+  %body{:class => "#{@home_page ? 'homepage' : ''}"}
+    .header
+      = render  'layouts/header'
+    .container
+      .row
+        .large-10.large-centered.columns
+          = render 'layouts/flash_messages'
+    .row.content
+      / Main
+      .large-10.large-centered.columns
+        = yield
+    = debug(params) if Rails.env.development?
+    / Footer: Find it in _footer.html.erb
+    = render  'layouts/footer'
+    = javascript_include_tag "application"

@@ -1,0 +1,21 @@
+.card
+  - if news.image?
+    .image
+      %a{:href => "#{news_path(news)}"}= image_tag news.image_url
+  .card-summary
+    #card-captions
+      %span.card-category
+        = link_to news.category.name.upcase, "/#{news.category.name.downcase}"
+        |
+      %span.card-date
+        - if news.created_at > 2.days.ago
+          = time_ago_in_words(news.created_at)
+          ago
+        - else
+          = news.created_at.strftime("#{news.created_at.day.ordinalize} %B %y")
+    #card-title
+      %h1{:itemprop => "name"}= link_to news.title, news, :itemprop => "#{request.url}#{news_path(news)}"
+    #card-content
+      %p{:itemprop => "description"}
+        = simple_format news.content[0..200]
+        \...

@@ -1,0 +1,7 @@
+%h1 Add News
+= form_for(@news) do |f|
+  = render 'shared/error_messages'
+  .fields
+    = render 'news_fields', :f => f
+  .actions
+    = f.submit "Save", :class => 'button'

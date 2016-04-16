@@ -1,4 +1,4 @@
-.slideshow-wrapper
+.slideshow-wrapper.hide
   .preloader
   %ul.example-orbit{ "data-orbit": true }
     - @news.last(5).each do |news|
@@ -11,4 +11,4 @@
             .category= news.category.name
 #cards-wrapper
   - for news in @news
-    = render 'card', :news => news
+    = render 'card', news: news

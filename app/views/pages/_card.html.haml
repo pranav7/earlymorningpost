@@ -14,8 +14,13 @@
         - else
           = news.created_at.strftime("#{news.created_at.day.ordinalize} %B %y")
     #card-title
-      %h1{:itemprop => "name"}= link_to news.title, news, :itemprop => "#{request.url}#{news_path(news)}"
+      %h1{:itemprop => "name"}
+        - if news.external?
+          %a{ href: news.link, target: "_blank" }
+            #{news.title}
+        - else
+          = link_to news.title, news, itemprop: "#{request.url}#{news_path(news)}"
     #card-content
       %p{:itemprop => "description"}
-        = simple_format news.content[0..200]
+        = simple_format strip_links(news.content)
         \...

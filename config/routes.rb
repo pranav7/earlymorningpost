@@ -1,7 +1,12 @@
 Earlymorningpost::Application.routes.draw do
-  resources :news
-  resources :sessions, :only => [:new, :create, :destroy]
   root :to => 'pages#home'
+
+  resources :news
+  resources :categories
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match "/admin",          :to => "sessions#new", :via => :get
+  match "/byebye",         :to => "sessions#destroy", :via => :get
 
   match "/technology",     :to => "pages#technology", :via => :get
   match "/science",        :to => "pages#science", :via => :get
@@ -9,12 +14,10 @@ Earlymorningpost::Application.routes.draw do
   match "/entertainment",  :to => "pages#entertainment", :via => :get
   match "/about",          :to => "pages#about", :via => :get
   match "/contact",        :to => "pages#contact", :via => :get
-  match "/nimda",          :to => "sessions#new", :via => :get
-  match "/byebye",         :to => "sessions#destroy", :via => :get
 
   match "sitemap",         :to => "sitemap#sitemap", :via => :get
   match "rssfeed",         :to => 'sitemap#rssfeed',   :via => :get
-  match "BingSiteAuth",:to => "sitemap#BingSiteAuth", :via => :get
+  match "BingSiteAuth",    :to => "sitemap#BingSiteAuth", :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

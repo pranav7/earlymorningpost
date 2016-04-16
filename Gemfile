@@ -5,6 +5,7 @@ gem 'rails', '4.0.2'
 
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
+gem 'haml'
 
 gem 'dotenv-rails',
   require: "dotenv/rails-now",
@@ -12,6 +13,9 @@ gem 'dotenv-rails',
 
 # Use Annotate to annotate models
 gem 'annotate'
+
+# Nokogiri for XML Parsing
+gem "nokogiri"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

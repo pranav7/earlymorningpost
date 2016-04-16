@@ -71,6 +71,7 @@ group :development, :test do
   gem 'spork'
 
   gem "haml-rails"
+  gem 'pry'
 end
 
 group :test do

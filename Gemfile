@@ -6,6 +6,7 @@ gem 'rails', '4.0.2'
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
 gem 'haml'
+gem 'haml-rails'
 
 gem 'dotenv-rails',
   require: "dotenv/rails-now",
@@ -70,7 +71,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spork'
 
-  gem "haml-rails"
   gem 'pry'
 end
 

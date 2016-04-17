@@ -4,5 +4,6 @@
 
 container = document.querySelector("#cards-wrapper")
 msnry = new Masonry(container,
+  gutter: 10,
   itemSelector: ".card"
 )

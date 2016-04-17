@@ -22,5 +22,9 @@
         - else
           = link_to news.title, news, itemprop: "#{request.url}#{news_path(news)}"
     #card-content
-      %p{:itemprop => "description"}
-        = simple_format news.content.html_safe
+      %span{itemprop: "description"}
+        - if news.external?
+          = simple_format news.content.html_safe
+        - else
+          = simple_format "#{news.content[0..250]} ..."
+

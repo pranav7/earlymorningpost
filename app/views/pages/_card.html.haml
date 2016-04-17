@@ -22,5 +22,4 @@
           = link_to news.title, news, itemprop: "#{request.url}#{news_path(news)}"
     #card-content
       %p{:itemprop => "description"}
-        = simple_format strip_links(news.content)
-        \...
+        = simple_format news.content

@@ -1,7 +1,8 @@
 .card
   - if news.image?
     .image
-      %a{:href => "#{news_path(news)}"}= image_tag news.image_url
+      %a{:href => "#{news_path(news)}"}
+        = image_tag news.image_url
   .card-summary
     #card-captions
       %span.card-category
@@ -22,4 +23,4 @@
           = link_to news.title, news, itemprop: "#{request.url}#{news_path(news)}"
     #card-content
       %p{:itemprop => "description"}
-        = simple_format news.content
+        = simple_format news.content.html_safe

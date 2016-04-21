@@ -10,5 +10,8 @@
             .title= link_to news.title, news
             .category= news.category.name
 #cards-wrapper
-  - for news in @news
+  - @news.each_with_index do |news, index|
+    - if index != 0 && index % 4 == 0
+      = render 'ad_card'
+
     = render 'card', news: news

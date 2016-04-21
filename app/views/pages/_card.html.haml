@@ -24,9 +24,11 @@
     #card-content
       %span{itemprop: "description"}
         - if news.external?
-          = simple_format news.content.html_safe
+          = "#{strip_tags(news.content.squish)[0..400]} ..."
+          %a{ href: news.link, target: "_blank" }
+            read more >>
         - else
           = simple_format "#{news.content[0..250]} ..."
-          %a{href: news_path(news)}
+          %a{ href: news_path(news) }
             read more >>
 

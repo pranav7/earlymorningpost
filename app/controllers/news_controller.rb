@@ -51,7 +51,9 @@ class NewsController < ApplicationController
 	def destroy
 		@news = News.find(params[:id])
 		@news.destroy
-		redirect_to news_index_path, :flash => { :alert => "News Deleted!"}
+
+    flash[:alert] = "News Deleted"
+    redirect_to news_index_path
 	end
 
 	private
@@ -78,10 +80,10 @@ class NewsController < ApplicationController
       news.external = true
 
       if news.save
-        puts "###### OK ########"
+        Rails.logger.info "###### OK ########"
       else
-        puts "##### ERRORS ######"
-        puts news.errors.full_messages
+        Rails.logger.warn "##### ERRORS ######"
+        Rails.logger.warn news.errors.full_messages
       end
     end
   end

@@ -27,4 +27,6 @@
           = simple_format news.content.html_safe
         - else
           = simple_format "#{news.content[0..250]} ..."
+          %a{href: news_path(news)}
+            read more >>
 

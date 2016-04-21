@@ -8,10 +8,6 @@ Earlymorningpost::Application.routes.draw do
   match "/admin",          :to => "sessions#new", :via => :get
   match "/byebye",         :to => "sessions#destroy", :via => :get
 
-  match "/technology",     :to => "pages#technology", :via => :get
-  match "/science",        :to => "pages#science", :via => :get
-  match "/world",          :to => "pages#world", :via => :get
-  match "/entertainment",  :to => "pages#entertainment", :via => :get
   match "/about",          :to => "pages#about", :via => :get
   match "/contact",        :to => "pages#contact", :via => :get
 

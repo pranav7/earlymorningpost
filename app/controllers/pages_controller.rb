@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
   def home
-    @home_page = true
-    @news = News.all
+    redirect_to category_path(Category.first)
+
+    #@home_page = true
+    #@news = News.all
   end
 
   def technology

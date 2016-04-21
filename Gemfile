@@ -17,6 +17,9 @@ gem 'annotate'
 
 # Nokogiri for XML Parsing
 gem "nokogiri"
+gem "ruby-readability", require: 'readability'
+gem "fastimage"
+gem "open_uri_redirections"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

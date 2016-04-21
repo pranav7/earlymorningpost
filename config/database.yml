@@ -8,7 +8,7 @@
 #
 development:
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   database: earlymorningpost_development
   pool: 5
   password: 
@@ -25,7 +25,8 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
+  # encoding: unicode
   database: earlymorningpost_production
   pool: 5
   password:

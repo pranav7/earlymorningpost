@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
-//= require masonry.pkgd
 //= require disqus
 //= require_tree .
 

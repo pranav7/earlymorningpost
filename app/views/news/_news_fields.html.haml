@@ -22,5 +22,8 @@
   = f.label 'YouTube Video ID'
   = f.text_field :video_url
 .field
+  = f.label "Google News URL"
+  = text_field_tag :feed_url
+.field
   = collection_select :news, :category_id, Category.all, :id, :name, |
     { :prompt => 'Please select a cateogry' }, :class => 'dropdown'  |

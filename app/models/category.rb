@@ -2,7 +2,7 @@ class Category < ActiveRecord::Base
   attr_accessible :name, :id
 
   has_many :news
-  validates :name, presence: true
+  validates :name, uniqueness: true, presence: true
   
   def to_param
     "#{id}+#{name.parameterize}"

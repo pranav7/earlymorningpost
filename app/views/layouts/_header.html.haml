@@ -17,11 +17,9 @@
       %section.top-bar-section.navigation
         / Left Nav Section
         %ul.left
+          - Category.all.each do |category|
+            %li= link_to category.name.upcase,   category_path(category)
           %li= link_to "HOME",            root_path
-          %li= link_to "WORLD",           world_path
-          %li= link_to "TECHNOLOGY",      technology_path
-          %li= link_to "SCIENCE",         science_path
-          %li= link_to "ENTERTAINMENT",   entertainment_path
         - if admin?
           / Right Nav Section
           %ul.right

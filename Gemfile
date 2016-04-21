@@ -5,6 +5,8 @@ gem 'rails', '4.0.2'
 
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
+gem 'haml'
+gem 'haml-rails'
 
 gem 'dotenv-rails',
   require: "dotenv/rails-now",
@@ -12,6 +14,12 @@ gem 'dotenv-rails',
 
 # Use Annotate to annotate models
 gem 'annotate'
+
+# Nokogiri for XML Parsing
+gem "nokogiri"
+gem "ruby-readability", require: 'readability'
+gem "fastimage"
+gem "open_uri_redirections"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -65,6 +73,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'spork'
+
+  gem 'pry'
 end
 
 group :test do

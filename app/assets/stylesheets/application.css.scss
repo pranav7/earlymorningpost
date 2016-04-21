@@ -24,9 +24,7 @@ html, html a {
 	-moz-font-smoothing: antialiased !important;
 }
 
-
 .header-wrapper {
-
 	.logo {
 		padding: 1em;
 		width: 8.5em;
@@ -245,7 +243,6 @@ html, html a {
 	}
 
 	.orbit-caption {
-
 		.title {
 			font-style: $font-stack !important;
 		}
@@ -262,6 +259,7 @@ html, html a {
 		a:hover {
 			text-decoration: none;
 			color: #fff;
+      background: white;
 		}
 
 		a:visited {
@@ -271,10 +269,12 @@ html, html a {
 }
 
 #cards-wrapper {
-	margin-top: 2em !important;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+  margin-top: 2em !important;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 $card-width: 100%;
@@ -283,14 +283,13 @@ $card-height: auto;
 .card {
 	box-shadow:	#DEDEDE 0px 3px 0px;
 	background: white;
-	margin-bottom: 1rem;
 	border-radius: 3px;
 	transform-origin: top left;
 	max-width: 28em !important;
 	width: $card-width;
 	height: $card-height;
-	overflow: hidden;
-	vertical-align: top;
+	margin-bottom: 1rem;
+  margin-right: 5px;
 
 	.image {
 		width: 100%;
@@ -308,15 +307,13 @@ $card-height: auto;
 			display: inline-block;
 			width: 100%;
 
-			h2 {
-
-			}
 			a {
-				color: #969696;
-			}
+			  color: #969696;
 
-			a:hover {
-				color: #2c3e50;
+        &:hover {
+          color: #2c3e50;
+          background: white;
+        }
 			}
 
 			.card-date {
@@ -342,18 +339,20 @@ $card-height: auto;
 			margin-top: 0.75em;
 
 			h1 {
-				font-size: 1.5rem !important;
-				font-weight: 300 !important;
+				font-size: 1.7rem !important;
+				font-weight: 700 !important;
 				line-height: 1.2 !important;
-				font-family: $font-stack;
+				font-family: $font-roboto;
 				display: inline;
 			}
+
 			a {
 				color: #2c3e50;
-			}
 
-			a:hover {
-				color: #6E6E6E;
+        &:hover {
+          color: rgb(23, 86, 138);
+          background: white;
+        }
 			}
 		}
 
@@ -362,22 +361,18 @@ $card-height: auto;
 		$card-desc-font-size: 0.85rem;
 
 		#card-content {
-			overflow: hidden;
-			max-height: 60%;
+      font-family: $font-roboto;
+      font-size: $card-desc-font-size;
+			line-height: $line-height;
+
 			margin-top: 1em;
 			margin-bottom: 0.5em;
-			display: -webkit-box;
-			-webkit-line-clamp: 4;
-			-webkit-box-orient: vertical; 
 
-			p {
-				font-family: $font-roboto;
-				font-size: $card-desc-font-size;
-				font-weight: 300 !important;
-				line-height: $line-height;
-				color: #666666;
-				display: inline;
-			}
+      a:hover {
+        color: black;
+        background: white;
+        text-decoration: underline;
+      }
 		}
 	}
 }

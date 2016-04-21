@@ -1,0 +1,29 @@
+.field
+  = f.label :title
+  = f.text_field :title, :class => 'add-title'
+.field
+  = f.label :sub_heading
+  = f.text_area :sub_heading, :class => 'add-sub-heading'
+.field
+  = f.label :content
+  = f.text_area :content, :size => "30x20", :class => 'add-content'
+.field
+  = f.file_field :image
+.field
+  = f.label :remote_image_url, "or Image URL"
+  = f.text_field :remote_image_url
+.field
+  = f.label :image_courtesy
+  = f.text_field :image_courtesy
+.field
+  = f.label :author
+  = f.text_field :author
+.field
+  = f.label 'YouTube Video ID'
+  = f.text_field :video_url
+.field
+  = f.label "Google News URL"
+  = text_field_tag :feed_url
+.field
+  = collection_select :news, :category_id, Category.all, :id, :name, |
+    { :prompt => 'Please select a cateogry' }, :class => 'dropdown'  |

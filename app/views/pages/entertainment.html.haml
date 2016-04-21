@@ -1,0 +1,10 @@
+.main
+  #page-title
+    %h2= @title.upcase
+  %hr/
+  - if @news.empty?
+    %h2 Jim's dead.
+  - else
+    #cards-wrapper
+      - for news in @news
+        = render 'card', :news => news

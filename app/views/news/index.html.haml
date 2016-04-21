@@ -1,0 +1,13 @@
+.row
+  .large-6.columns
+    %h1.index All News
+  .large-6.columns
+    = link_to "New News", new_news_path, :class => "buttons button round"
+%hr/
+.row
+  .large-12.columns
+    %ul.news-list
+      - for news in @news
+        %li
+          = render 'news_index', :news => news
+    = paginate @news

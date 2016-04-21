@@ -1,0 +1,8 @@
+- if @news.errors.any?
+  .error.round
+    %h4= pluralize(@news.errors.count, "error")
+    %span There were problems with the following fields:
+    %ul
+      - @news.errors.full_messages.each do |message|
+        %li
+          * #{message}

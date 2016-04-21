@@ -11,7 +11,7 @@ class News < ActiveRecord::Base
 
 	paginates_per 20
 
-	belongs_to :category, dependent: :destroy
+	belongs_to :category
 
 	# Validations, a news should have a Content, Title and Category ID.
 	validates :content, presence: true

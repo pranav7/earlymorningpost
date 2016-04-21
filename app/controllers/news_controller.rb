@@ -77,8 +77,11 @@ class NewsController < ApplicationController
       news.category = Category.find(params[:news][:category_id])
       news.external = true
 
-      unless news.save
-        Rails.logger.warn news.errors.full_messages
+      if news.save
+        puts "###### OK ########"
+      else
+        puts "##### ERRORS ######"
+        puts news.errors.full_messages
       end
     end
   end

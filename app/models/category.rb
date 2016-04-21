@@ -1,7 +1,12 @@
 class Category < ActiveRecord::Base
-	attr_accessible :name, :id
+  attr_accessible :name, :id
 
-	has_many :news
+  has_many :news
+  validates :name, presence: true
+  
+  def to_param
+    "#{id}+#{name.parameterize}"
+  end
 end
 
 # == Schema Information

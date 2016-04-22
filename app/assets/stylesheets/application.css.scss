@@ -15,7 +15,8 @@
 
 $font-stack: 'Roboto Slab', serif;
 $font-roboto: 'Roboto', sans-serif;
-$font-content: 'Enriqueta', serif;
+$font-content: 'Roboto', sans-serif;
+$font-heading: 'Chivo', sans-serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $content-color: #4E5860;
 
@@ -142,11 +143,6 @@ html, html a {
 		color: #C4C4C4;
 		text-decoration: none;
 	}
-
-	a:hover {
-		font-weight: bold;
-		color: #1A1A1A;
-	}
 }
 
 #footer-nav {
@@ -154,12 +150,7 @@ html, html a {
 	color: #C4C4C4;
 
 	i {
-		font-size: 110%;
-	}
-
-	a:link {
-		color: #C4C4C4;
-		text-decoration: none;
+		font-size: 150%;
 	}
 
 	ul {
@@ -172,14 +163,16 @@ html, html a {
 		margin-top: 0.2em;
 	}
 
-	li a:link {
+	li a {
 		color: #C4C4C4;
 		text-decoration: none;
+    background: none;
+    vertical-align: top;
 	}
 
 	li a:hover {
-		font-weight: bold;
 		color: #FFF154;
+    background: none;
 	}
 }
 

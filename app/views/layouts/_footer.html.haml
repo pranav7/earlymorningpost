@@ -9,20 +9,20 @@
 .footer-top-border
 .footer-top
   .row
-    #footer-nav.small-3.columns
+    #footer-nav.large-3.columns
       %ul
         - Category.all.each do |category|
           %li= link_to category.name.upcase, category_path(category)
-    #footer-nav.small-5.column
+    #footer-nav.large-5.column
       %ul
         %li
           %i.fi-social-facebook.size-48
           = link_to "Facebook", "https://www.facebook.com/earlymorningpost"
         %li
-          %i.fi-social-google-plus.size-48
+          %i.fi-social-google-plus
           = link_to "Google+", "//plus.google.com/u/0/114178803974973491087?prsrc=3"
         %li
-          %i.fi-sheriff-badge.size-48
+          %i.fi-star
           = link_to "About Us", about_path
     .footer-logo.large-4.columns
       = link_to logoFooter

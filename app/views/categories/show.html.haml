@@ -10,7 +10,6 @@
   = link_to 'Back', categories_path
 
 #cards-wrapper
-  - @category.news.where(active: true)
   - @news.each_with_index do |news, index|
     - if index != 0 && index % 4 == 0
       = render '/pages/ad_card'

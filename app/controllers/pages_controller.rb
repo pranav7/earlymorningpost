@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
   def home
-    redirect_to category_path(Category.first)
-
-    #@home_page = true
-    #@news = News.all
+    @home_page = true
+    @news = News.where(active: true).page params[:page]
   end
 
   def technology

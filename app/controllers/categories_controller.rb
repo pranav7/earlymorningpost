@@ -12,6 +12,8 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find params[:id]
+    @news = @category.news.where(active: true) 
+    @news.page params[:page]
     @home_page = true
   end
 

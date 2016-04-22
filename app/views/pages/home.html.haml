@@ -12,6 +12,8 @@
 #cards-wrapper
   - @news.each_with_index do |news, index|
     - if index != 0 && index % 4 == 0
-      = render 'ad_card'
+      = render '/pages/ad_card'
 
-    = render 'card', news: news
+    = render '/pages/card', news: news
+
+= paginate @news

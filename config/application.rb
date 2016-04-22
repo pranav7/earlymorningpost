@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module Earlymorningpost
   class Application < Rails::Application
-    config.logger = Logger.new(STDOUT)
+    # config.logger = Logger.new(STDOUT)
     config.assets.paths << Rails.root.join('vendor', 'assets', 'javascripts')
 
     config.generators do |g| 

@@ -70,12 +70,23 @@ class NewsController < ApplicationController
       source = open(link).read rescue nil
       next unless source
 
+      item.xpath("guid").text =~ /cluster=(\d{1,45})/
+      guid = $1
+      existing_news = News.find_by_source_id(guid)
+
+      if existing_news
+        Rails.logger.info "##### News with #{guid} already published #####"
+        existing_news.save
+        next
+      end
+
       parsed = Readability::Document.new(source)
       news = News.new
       news.title = parsed.title
       news.content = parsed.content
       news.image = parsed.images.first unless parsed.images.empty?
       news.link = link
+      news.source_id = guid
       news.category = Category.find(params[:news][:category_id])
       news.external = true
 

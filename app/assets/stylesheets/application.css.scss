@@ -303,6 +303,11 @@ $card-height: auto;
 		width: 100%;
 		height: 225px;
 		overflow: hidden;
+
+    img {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
 	}
 
 	.card-summary {

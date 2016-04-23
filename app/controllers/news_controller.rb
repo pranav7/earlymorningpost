@@ -87,7 +87,7 @@ class NewsController < ApplicationController
       news = News.new
       news.title = parsed.title
       news.content = parsed.content
-      news.image = parsed.images.first unless parsed.images.empty?
+      news.remote_image_url = parsed.images.first unless parsed.images.empty?
       news.link = link
       news.source_id = guid
       news.category = Category.find(params[:news][:category_id])

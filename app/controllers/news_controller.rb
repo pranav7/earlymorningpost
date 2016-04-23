@@ -66,7 +66,10 @@ class NewsController < ApplicationController
     doc = Nokogiri::XML open(params[:feed_url])
 
     doc.css("item").each do |item|
-      link = item.xpath("link").text
+      google_link = item.xpath("link").text
+      google_link =~ /url=(.*)/
+      link = $1
+
       source = open(link).read rescue nil
       next unless source
 

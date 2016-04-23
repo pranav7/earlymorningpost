@@ -1,4 +1,4 @@
-.card
+.card{ id: news.to_param }
   - if news.image?
     .image
       %a{:href => "#{news_path(news)}"}

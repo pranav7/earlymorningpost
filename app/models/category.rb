@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  attr_accessible :name, :id
+  attr_accessible :name, :id, :icon
 
   has_many :news, dependent: :destroy
   validates :name, uniqueness: true, presence: true

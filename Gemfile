@@ -28,6 +28,8 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 
+gem "font-awesome-rails"
+
 # Use Uglifier as compressor for JavaScript asses
 gem 'uglifier', '>= 1.3.0'
 

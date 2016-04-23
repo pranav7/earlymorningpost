@@ -1,6 +1,10 @@
 .main
   #page-title
-    %h2= @category.name.upcase
+    %h2
+      - if @category.icon
+        = fa_icon "#{@category.icon} lg", text: @category.name.upcase
+      - else
+        = @category.name.upcase
 - if admin?
   %p
     %strong Name:

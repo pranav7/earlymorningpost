@@ -300,11 +300,11 @@ $card-height: auto;
   }
 
 	.image {
-		width: 100%;
-		height: 225px;
 		overflow: hidden;
 
     img {
+      min-width: 100%;
+      max-width: 100%;
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
     }

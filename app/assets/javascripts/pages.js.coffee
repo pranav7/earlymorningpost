@@ -3,6 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 container = document.querySelector("#cards-wrapper")
-new Masonry(container,
-  itemSelector: ".card"
+
+imagesLoaded(container, ->
+  new Masonry(container,
+    itemSelector: ".card"
+  )
 )

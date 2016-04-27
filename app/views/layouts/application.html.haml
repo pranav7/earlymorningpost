@@ -36,7 +36,10 @@
     %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,300,900,100", :rel => "stylesheet", :type => "text/css"}/
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     %link{:href => "http://fonts.googleapis.com/css?family=Chivo:900", :rel => "stylesheet", :type => "text/css"}/
-    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+
+    = javascript_include_tag 'https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js'
+    = javascript_include_tag 'https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js'
+
     = favicon_link_tag    'favicon.ico'
     = stylesheet_link_tag "application"
     = csrf_meta_tags

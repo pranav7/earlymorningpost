@@ -14,10 +14,13 @@ class NewsController < ApplicationController
 	end
 
 	def create
-    if params[:feed_url]
-      parse_and_create_news
+    feed_url = params[:feed_url]
+    category = Category.find params[:news][:category_id]
 
-      redirect_to category_path(Category.find(params[:news][:category_id])) 
+    if params[:feed_url]
+      News.parse_and_create_news(feed_url, category)
+
+      redirect_to category_path(Category.find(category))
     else
       @news = News.new(params[:news])
       if @news.save
@@ -60,45 +63,5 @@ class NewsController < ApplicationController
 
   def news_params
     params.require(:news).permit(:title, :content, :category)
-  end
-
-  def parse_and_create_news
-    doc = Nokogiri::XML open(params[:feed_url])
-
-    doc.css("item").each do |item|
-      google_link = item.xpath("link").text
-      google_link =~ /url=(.*)/
-      link = $1
-
-      source = open(link).read rescue nil
-      next unless source
-
-      item.xpath("guid").text =~ /cluster=(\d{1,45})/
-      guid = $1
-      existing_news = News.find_by_source_id(guid)
-
-      if existing_news
-        Rails.logger.info "##### News with #{guid} already published #####"
-        existing_news.save
-        next
-      end
-
-      parsed = Readability::Document.new(source)
-      news = News.new
-      news.title = parsed.title
-      news.content = parsed.content
-      news.remote_image_url = parsed.images.first unless parsed.images.empty?
-      news.link = link
-      news.source_id = guid
-      news.category = Category.find(params[:news][:category_id])
-      news.external = true
-
-      if news.save
-        Rails.logger.info "###### OK ########"
-      else
-        Rails.logger.warn "##### ERRORS ######"
-        Rails.logger.warn news.errors.full_messages
-      end
-    end
   end
 end

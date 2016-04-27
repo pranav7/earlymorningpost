@@ -25,6 +25,46 @@ class News < ActiveRecord::Base
 	# based on when it was updated.
 	default_scope -> { order('updated_at DESC') }
 
+  def self.parse_and_create_news(feed_url, category)
+    doc = Nokogiri::XML open(feed_url)
+
+    doc.css("item").each do |item|
+      google_link = item.xpath("link").text
+      google_link =~ /url=(.*)/
+      link = $1
+
+      source = open(link).read rescue nil
+      next unless source
+
+      item.xpath("guid").text =~ /cluster=(\d{1,45})/
+      guid = $1
+      existing_news = News.find_by_source_id(guid)
+
+      if existing_news
+        Rails.logger.info "##### News with #{guid} already published #####"
+        existing_news.save
+        next
+      end
+
+      parsed = Readability::Document.new(source)
+      news = News.new
+      news.title = parsed.title
+      news.content = parsed.content
+      news.remote_image_url = parsed.images.first unless parsed.images.empty?
+      news.link = link
+      news.source_id = guid
+      news.category = category
+      news.external = true
+
+      if news.save
+        Rails.logger.info "###### OK ########"
+      else
+        Rails.logger.warn "##### ERRORS ######"
+        Rails.logger.warn news.errors.full_messages
+      end
+    end
+  end
+
 	def to_param
 		"#{id}+#{title.parameterize}"
 	end

@@ -10,6 +10,7 @@ module Earlymorningpost
   class Application < Rails::Application
     # config.logger = Logger.new(STDOUT)
     config.assets.paths << Rails.root.join('vendor', 'assets', 'javascripts')
+    config.active_record.raise_in_transactional_callbacks = true
 
     config.generators do |g| 
         g.test_framework :rspec, 

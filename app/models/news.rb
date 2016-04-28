@@ -33,9 +33,6 @@ class News < ActiveRecord::Base
       google_link =~ /url=(.*)/
       link = $1
 
-      source = open(link).read rescue nil
-      next unless source
-
       item.xpath("guid").text =~ /cluster=(\d{1,45})/
       guid = $1
       existing_news = News.find_by_source_id(guid)
@@ -46,22 +43,30 @@ class News < ActiveRecord::Base
         next
       end
 
-      parsed = Readability::Document.new(source)
-      news = News.new
-      news.title = parsed.title
-      news.content = parsed.content
-      news.remote_image_url = parsed.images.first unless parsed.images.empty?
-      news.link = link
-      news.source_id = guid
-      news.category = category
-      news.external = true
+      read_and_create(link, category, source_id: guid)
+    end
+  end
 
-      if news.save
-        Rails.logger.info "###### OK ########"
-      else
-        Rails.logger.warn "##### ERRORS ######"
-        Rails.logger.warn news.errors.full_messages
-      end
+  def self.read_and_create(link, category, options = {})
+    source_id = options.delete(:source_id)
+    source = open(link).read rescue nil
+    return unless source
+
+    parsed = Readability::Document.new(source)
+    news = News.new
+    news.title = parsed.title
+    news.content = parsed.content
+    news.remote_image_url = parsed.images.first unless parsed.images.empty?
+    news.link = link
+    news.source_id = source_id
+    news.category = category
+    news.external = true
+
+    if news.save
+      Rails.logger.info "###### OK ########"
+    else
+      Rails.logger.warn "##### ERRORS ######"
+      Rails.logger.warn news.errors.full_messages
     end
   end
 

@@ -24,9 +24,14 @@
 .field
   = f.label 'active'
   = f.check_box :active
+%hr
 .field
   = f.label "Google News URL"
   = text_field_tag :feed_url
+%hr
+.field
+  = f.label "Source URL"
+  = text_field_tag :source_link
 .field
   = collection_select :news, :category_id, Category.all, :id, :name, |
     { :prompt => 'Please select a cateogry' }, :class => 'dropdown'  |

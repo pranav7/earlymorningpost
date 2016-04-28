@@ -14,11 +14,16 @@ class NewsController < ApplicationController
 	end
 
 	def create
-    feed_url = params[:feed_url]
     category = Category.find params[:news][:category_id]
 
-    if params[:feed_url]
-      News.parse_and_create_news(feed_url, category)
+    if !params[:source_link].blank?
+      News.read_and_create(params[:source_link], category)
+
+      redirect_to category_path(Category.find(category))
+      return
+    elsif !params[:feed_url].blank?
+      binding.pry
+      News.parse_and_create_news(params[:feed_url], category)
 
       redirect_to category_path(Category.find(category))
     else

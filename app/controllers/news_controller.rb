@@ -22,7 +22,6 @@ class NewsController < ApplicationController
       redirect_to category_path(Category.find(category))
       return
     elsif !params[:feed_url].blank?
-      binding.pry
       News.parse_and_create_news(params[:feed_url], category)
 
       redirect_to category_path(Category.find(category))

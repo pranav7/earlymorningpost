@@ -18,7 +18,9 @@
         / Left Nav Section
         %ul.left
           - Category.all.each do |category|
-            %li= link_to category.name.upcase,   category_path(category)
+            %li
+              %a{href: category_path(category)}
+                = fa_icon "#{category.icon}", text: category.name.upcase
         - if admin?
           / Right Nav Section
           %ul.right

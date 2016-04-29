@@ -1,8 +1,12 @@
 .card{ id: news.to_param }
   - if news.image?
     .image
-      %a{:href => "#{news_path(news)}"}
-        = image_tag news.image_url
+      - if news.external?
+        %a{href: news.link, target: "_blank"}
+          = image_tag news.image_url
+      - else
+        %a{href: "#{news_path(news)}"}
+          = image_tag news.image_url
   .card-summary
     #card-captions
       %span.card-category

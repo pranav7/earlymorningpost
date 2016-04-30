@@ -76,6 +76,10 @@ class News < ActiveRecord::Base
 	end
 
   def self.parse_source(text)
+    # Scanning the last 25% of the string
+    percent = text.length - (0.25 * text.length).round
+    text = text[percent..-1]
+
     if text.include?(" | ")
       text =~ /\|(.*)/
       return $1.strip || nil
@@ -85,7 +89,7 @@ class News < ActiveRecord::Base
       text =~ /\-(.*)/
     end
 
-    $1.strip || nil
+    return $1.strip if $1
   end
 end
 

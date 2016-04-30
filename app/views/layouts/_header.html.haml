@@ -1,8 +1,13 @@
 .header-wrapper.fixed.contain-to-grid
   .top-bar{ data: { topbar: true }, role: "navigation" }
-    .title-area
-      .logo
+    %ul.title-area
+      %li.logo.name.show-for-medium-up
         = link_to logoHeader, root_path
+      %li.short-logo.name.show-for-small-only
+        = link_to shortLogoHeader, root_path
+      %li.toggle-topbar.menu-icon
+        %a{href: '#'}
+          %span Categories
     .top-bar-section
       %ul.right
         - Category.all.each do |category|

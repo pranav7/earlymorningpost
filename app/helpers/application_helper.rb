@@ -12,6 +12,10 @@ module ApplicationHelper
 	def logoHeader
 		image_tag("logo-header.png",	alt: "Early Morning Post" )
 	end
+  
+  def shortLogoHeader
+    image_tag("short-logo.png",	alt: "Early Morning Post" )
+  end
 
 	def logoFooter
 		image_tag "logo-footer.png", alt: "Early Morning Post", width: 380

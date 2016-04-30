@@ -22,7 +22,7 @@ gem "fastimage"
 gem "open_uri_redirections"
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Zurb Foundation
 gem 'foundation-rails'

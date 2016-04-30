@@ -59,6 +59,7 @@ class News < ActiveRecord::Base
     news.remote_image_url = parsed.images.first unless parsed.images.empty?
     news.link = link
     news.source_id = source_id
+    news.source_name = parse_source(news.title)
     news.category = category
     news.external = true
 
@@ -73,6 +74,19 @@ class News < ActiveRecord::Base
 	def to_param
 		"#{id}+#{title.parameterize}"
 	end
+
+  def self.parse_source(text)
+    if text.include?(" | ")
+      text =~ /\|(.*)/
+      return $1.strip || nil
+    elsif text.include?(" : ")
+      text =~ /\:(.*)/
+    elsif text.include?(" - ")
+      text =~ /\-(.*)/
+    end
+
+    $1.strip || nil
+  end
 end
 
 # == Schema Information

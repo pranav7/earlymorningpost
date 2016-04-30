@@ -340,6 +340,20 @@ $card-desc-font-size: 0.85rem;
     background: white;
     text-decoration: underline;
   }
+
+  .read-more {
+    margin-top: 5px;
+  }
+
+  .text-muted {
+    color: grey;
+    font-size: 11px;
+  }
+
+  .source-name {
+    font-weight: 600;
+    font-size: 13px;
+  }
 }
 }
 }

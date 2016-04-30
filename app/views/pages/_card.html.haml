@@ -29,10 +29,15 @@
       %span{itemprop: "description"}
         - if news.external?
           = "#{strip_tags(news.content.squish)[0..400]} ..."
-          %a{ href: news.link, target: "_blank" }
-            read more >>
+          %a.read-more{ href: news.link, target: "_blank" }
+            %br
+            - if news.source_name
+              %span.text-muted more at
+              %span.source-name= news.source_name
+            - else
+              %span.text-muted read more &#8594;
         - else
           = simple_format "#{news.content[0..250]} ..."
           %a{ href: news_path(news) }
-            read more >>
-
+            %br/
+            %span.text-muted read more &#8594;

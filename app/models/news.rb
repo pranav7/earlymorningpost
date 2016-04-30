@@ -9,7 +9,7 @@ class News < ActiveRecord::Base
 					:remote_image_url,
 					:video_url
 
-	paginates_per 30
+	paginates_per 50
 
 	belongs_to :category
 

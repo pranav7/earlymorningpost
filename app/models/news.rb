@@ -54,7 +54,7 @@ class News < ActiveRecord::Base
 
     parsed = Readability::Document.new(source)
     news = News.new
-    news.title = parsed.title
+    news.title = parsed.title.strip.gsub("\n", "")
     news.content = parsed.content
     news.remote_image_url = parsed.images.first unless parsed.images.empty?
     news.link = link

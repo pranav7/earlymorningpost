@@ -19,3 +19,5 @@
 /public/uploads/news/image
 /public/uploads/tmp
 .env
+.ruby-gemset
+.ruby-version

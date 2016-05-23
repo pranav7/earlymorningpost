@@ -10,7 +10,7 @@
   .card-summary
     #card-captions
       %span.card-category
-        = link_to news.category.name.upcase, "/#{news.category.name.downcase}"
+        = link_to news.category.name.upcase, category_path(news.category)
         |
       %span.card-date
         - if news.created_at > 2.days.ago

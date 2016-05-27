@@ -17,7 +17,7 @@ namespace :scheduler do
     Rails.logger = Logger.new(STDOUT)
 
     puts "[#{Time.zone.now}] Starting to destroy News older than 15 days"
-    stale_news = News.where(News.arel_table[:created_at].gt(15.days.ago))
+    stale_news = News.where(News.arel_table[:created_at].lt(15.days.ago))
     stale_news.destroy_all
     puts "[#{Time.zone.now}] News older than 15 days Destroyed"
   end

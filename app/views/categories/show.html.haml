@@ -17,6 +17,10 @@
   - @news.each_with_index do |news, index|
     - if index != 0 && index % 4 == 0
       = render '/pages/ad_card'
+    - if index != 0 && index % 5 == 0
+      .card
+        .fb-like{"data-share": true, "data-width": 450, "data-show-face": true}
+
 
     = render '/pages/card', news: news
 

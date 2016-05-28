@@ -254,15 +254,22 @@ $card-height: auto;
     margin-top: 5px;
   }
 
-.image {
-  overflow: hidden;
+  .image {
+    overflow: hidden;
 
-  img {
-    width: 100%;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    img {
+      width: 100%;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
   }
-}
+
+  .fb-like {
+    padding: 25px;
+    display: block;
+    margin-bottom: 15px;
+    height: 30px;
+  }
 
 .card-summary {
   width: 100%;

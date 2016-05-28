@@ -50,6 +50,7 @@
     = stylesheet_link_tag "application"
     = csrf_meta_tags
   %body{class: "#{@home_page ? 'homepage' : ''}"}
+    = render 'shared/facebook_script'
     = render 'layouts/header'
     .row
       .large-12.large-centered.columns

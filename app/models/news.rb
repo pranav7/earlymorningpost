@@ -71,10 +71,6 @@ class News < ActiveRecord::Base
     end
   end
 
-	def to_param
-		"#{id}+#{title.parameterize}"
-	end
-
   def self.parse_source(text)
     # Scanning the last 25% of the string
     percent = text.length - (0.25 * text.length).round
@@ -90,6 +86,15 @@ class News < ActiveRecord::Base
     end
 
     return $1.strip if $1
+  end
+
+  def to_param
+    "#{id}+#{title.parameterize}"
+  end
+
+  def like!
+    self.likes += 1
+    save!
   end
 end
 

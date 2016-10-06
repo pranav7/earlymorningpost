@@ -1,7 +1,10 @@
 Earlymorningpost::Application.routes.draw do
   root :to => 'pages#home'
 
-  resources :news
+  resources :news do
+    put :like
+  end
+
   resources :categories
   resources :sessions, only: [:new, :create, :destroy]
 

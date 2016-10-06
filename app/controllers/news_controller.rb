@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
 	# Find the methods in the Application Controller
-	before_filter :authenticate, except: :show
+	before_filter :authenticate, except: [:show, :like]
 
 	def index
 		@news = News.order(:created_at).page params[:page]
@@ -62,6 +62,20 @@ class NewsController < ApplicationController
     flash[:alert] = "News Deleted"
     redirect_to news_index_path
 	end
+
+  def like
+    @news = News.find(params[:news_id])
+
+    if @news.like!
+      respond_to do |format|
+        format.json { render json: @news.likes, status: :no_content }
+      end
+    else
+      respond_to do |format|
+        format.json { render json: "ERROR", status: :bad_request }
+      end
+    end
+  end
 
 	private
 

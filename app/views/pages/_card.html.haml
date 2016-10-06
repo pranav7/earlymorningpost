@@ -37,8 +37,16 @@
                 %span.source-name= news.source_name
               - else
                 %span.read-more read more &#8594;
+            %span.like-news
+              = fa_icon "thumbs-o-up",
+                class: "like-button",
+                id: "like-#{news.id}",
+                data: { "news-id": news.id }
+              - if news.likes > 0
+                %span.like-count{ id: "like-count-#{news.id}"} #{news.likes}
         - else
           = simple_format "#{news.content[0..250]} ..."
           %a{ href: news_path(news) }
             %br/
             %span.text-muted read more &#8594;
+

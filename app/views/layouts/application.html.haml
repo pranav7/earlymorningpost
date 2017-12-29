@@ -42,6 +42,15 @@
     %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon", :sizes => "120x120"}
     %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon", :sizes => "152x152"}
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    %script{ async: true, src: "https://www.googletagmanager.com/gtag/js?id=UA-49061019-1" }
+    %script
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-49061019-1');
+
     = render partial: "layouts/page_level_ads"
     = javascript_include_tag 'https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js'
     = javascript_include_tag 'https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js'

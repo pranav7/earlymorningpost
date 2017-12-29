@@ -25,6 +25,8 @@ class News < ActiveRecord::Base
 	# based on when it was updated.
 	default_scope -> { order('updated_at DESC') }
 
+  after_destroy :delete_image_from_s3
+
   def self.parse_and_create_news(feed_url, category)
     doc = Nokogiri::XML open(feed_url)
 
@@ -91,20 +93,8 @@ class News < ActiveRecord::Base
 
     return $1.strip if $1
   end
-end
 
-# == Schema Information
-#
-# Table name: news
-#
-#  id             :integer          not null, primary key
-#  title          :string(255)
-#  content        :text
-#  created_at     :datetime
-#  updated_at     :datetime
-#  category_id    :integer
-#  sub_heading    :text
-#  image          :string(255)
-#  author         :string(255)
-#  image_courtesy :string(255)
-#  video_url      :string(255)
+  def delete_image_from_s3
+    self.remove_image!
+  end
+end
